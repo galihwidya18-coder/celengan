@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamus istilah — Celengan</title>
+<meta name="description" content="60+ istilah keuangan yang muncul di seluruh materi Celengan, bisa dicari langsung.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Celengan">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Kamus istilah — Celengan">
+<meta property="og:description" content="60+ istilah keuangan yang muncul di seluruh materi Celengan, bisa dicari langsung.">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kamus istilah — Celengan">
+<meta name="twitter:description" content="60+ istilah keuangan yang muncul di seluruh materi Celengan, bisa dicari langsung.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="merek" href="index.html"><span class="slot"><i></i></span>Celengan</a>
+    <button class="navtoggle" id="navtoggle" aria-expanded="false"><svg class="ic"><use href="icons.svg#ic-menu"/></svg>Menu</button>
+    <nav class="navlink" id="navlink">
+      <a href="index.html#peta">Peta belajar</a>
+      <a href="fondasi.html">Fondasi</a>
+      <a href="nabung.html">Nabung</a>
+      <a href="rumah.html">Beli rumah</a>
+      <a href="investasi.html">Investasi</a>
+      <a href="kamus.html" class="aktif">Kamus</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="sec" id="kamus">
+  <div class="wrap">
+    <div class="sec-kepala"><h2>Kamus istilah</h2></div>
+    <p class="sec-sub">Lupa arti satu istilah di tengah bacaan? Ketik di sini untuk menyaring — semua yang muncul di seluruh materi terkumpul di bawah ini.</p>
+    <input class="cari-kamus" type="search" id="cari-kamus" placeholder="Cari istilah, misalnya: anuitas, SLIK, ARA" aria-label="Cari istilah">
+    <ul class="kamus" id="daftar-kamus"></ul>
+    <p id="kamus-kosong" style="display:none;color:var(--tinta-60)">Tidak ada istilah yang cocok. Coba kata kunci yang lebih pendek.</p>
+  </div>
+</section>
+  <div class="modul-nav">
+    <a href="kuis.html"><svg class="ic"><use href="icons.svg#ic-arrow-left"/></svg><span><span class="arah">Sebelumnya</span><span class="judul">Cek pemahaman</span></span></a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="merek" style="color:#fff;margin-bottom:12px"><span class="slot" style="background:var(--n1)"><i style="background:var(--tinta)"></i></span>Celengan</div>
+      <p>Materi belajar keuangan berbahasa Indonesia, pakai angka rupiah dan aturan yang berlaku di sini — dibuat untuk dibaca pelan-pelan, bukan buat diskrol cepat lalu lupa.</p>
+    </div>
+    <div>
+      <h4><svg class="ic"><use href="icons.svg#ic-map"/></svg>Jalur belajar</h4>
+      <ul>
+        <li><a href="fondasi.html">Fondasi</a></li>
+        <li><a href="utang.html">Utang &amp; bunga</a></li>
+        <li><a href="nabung.html">Nabung masa depan</a></li>
+        <li><a href="rumah.html">Beli rumah &amp; KPR</a></li>
+        <li><a href="investasi.html">SBN &amp; reksa dana</a></li>
+        <li><a href="saham.html">Saham</a></li>
+        <li><a href="panas.html">Forex, kripto &amp; emas</a></li>
+        <li><a href="proteksi.html">Proteksi &amp; pajak</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4><svg class="ic"><use href="icons.svg#ic-calc"/></svg>Alat hitung</h4>
+      <ul>
+        <li><a href="fondasi.html#darurat">Dana darurat</a></li>
+        <li><a href="nabung.html#compound">Tabungan masa depan</a></li>
+        <li><a href="rumah.html#kpr">Cicilan KPR</a></li>
+        <li><a href="saham.html#risiko">Profil risiko</a></li>
+        <li><a href="kuis.html">Cek pemahaman</a></li>
+        <li><a href="kamus.html">Kamus istilah</a></li>
+      </ul>
+    </div>
+    <div class="disclaimer" style="grid-column:1/-1">
+      Seluruh isi situs ini bersifat edukatif dan bukan saran investasi, hukum, atau perpajakan yang dipersonalisasi. Hasil hitungan adalah perkiraan; angka sebenarnya bergantung pada kebijakan bank, penyelenggara, dan peraturan yang berlaku saat kamu bertransaksi. Kinerja masa lalu tidak menjamin hasil di masa depan. Verifikasi legalitas setiap lembaga keuangan ke OJK, Bappebti, atau bursa terkait sebelum menyetor dana.
+    </div>
+  </div>
+</footer>
+
+<button class="ke-atas" id="keatas" aria-label="Kembali ke atas"><svg class="ic"><use href="icons.svg#ic-up"/></svg></button>
+
+<script src="app.js"></script>
+<script>
+(function(){
+"use strict";
+var $=Celengan.$;
+var kamus=[
+["Anuitas","Metode cicilan dengan nominal tetap, tapi porsi bunga mengecil dan porsi pokok membesar seiring waktu."],
+["Appraisal","Penilaian nilai wajar properti oleh pihak independen; plafon KPR mengacu pada nilai ini."],
+["ARA / ARB","Batas atas dan bawah pergerakan harga saham dalam satu hari bursa."],
+["AJB","Akta Jual Beli, dokumen peralihan hak yang dibuat di hadapan PPAT."],
+["Bappebti","Badan yang mengawasi perdagangan berjangka komoditi, termasuk pialang forex."],
+["BPHTB","Pajak yang dibayar pembeli atas perolehan hak atas tanah dan bangunan."],
+["Blue chip","Sebutan tidak resmi untuk saham perusahaan besar, mapan, dan likuid."],
+["Capital gain","Keuntungan dari selisih harga jual dan harga beli suatu aset."],
+["Cum date","Tanggal terakhir memegang saham untuk berhak menerima dividen."],
+["Compounding","Bunga berbunga; hasil investasi ikut menghasilkan pada periode berikutnya."],
+["Dana darurat","Simpanan likuid untuk kejadian tak terduga, umumnya 3–12 bulan pengeluaran."],
+["DER","Rasio total utang terhadap ekuitas."],
+["Diversifikasi","Menyebar investasi agar kerugian satu aset tidak menghancurkan seluruh portofolio."],
+["Dividen","Bagian laba perusahaan yang dibagikan kepada pemegang saham."],
+["DPLK","Dana Pensiun Lembaga Keuangan, wadah menabung pensiun di luar BPJS."],
+["DP / uang muka","Bagian harga yang dibayar tunai di awal, sisanya dibiayai kredit."],
+["Ex date","Hari setelah cum date; pembeli pada tanggal ini tidak lagi berhak atas dividen."],
+["Expense ratio","Total biaya tahunan reksa dana yang dipotong otomatis dari nilai aset."],
+["Fixed rate","Bunga tetap selama periode tertentu dalam kredit."],
+["FLPP","Fasilitas Likuiditas Pembiayaan Perumahan, skema KPR bersubsidi."],
+["Floating rate","Bunga mengambang yang menyesuaikan suku bunga dasar kredit bank."],
+["Fund fact sheet","Ringkasan bulanan satu halaman berisi kinerja, isi portofolio, dan biaya reksa dana."],
+["HGB","Hak Guna Bangunan; hak atas bangunan dengan jangka waktu dan wajib diperpanjang."],
+["Inflasi","Kenaikan harga umum yang menurunkan daya beli uang dari waktu ke waktu."],
+["JHT","Jaminan Hari Tua BPJS Ketenagakerjaan, terkumpul dari iuran pekerja dan pemberi kerja."],
+["Kolektibilitas","Peringkat kelancaran pembayaran kredit dalam catatan SLIK, dari 1 (lancar) sampai 5 (macet)."],
+["KPR","Kredit Pemilikan Rumah; pinjaman dengan rumah sebagai agunan."],
+["Kupon","Imbal hasil berkala yang dibayarkan penerbit obligasi kepada pemegangnya."],
+["Leverage","Penggunaan dana pinjaman untuk memperbesar ukuran posisi; memperbesar untung dan rugi."],
+["Likuiditas","Seberapa cepat aset bisa diubah jadi uang tunai tanpa memotong harga."],
+["Lot","Satuan transaksi. Di bursa saham Indonesia 1 lot = 100 lembar."],
+["LPS","Lembaga Penjamin Simpanan; menjamin simpanan bank sampai batas dan syarat tertentu."],
+["LTV","Rasio nilai pinjaman terhadap nilai agunan; menentukan besar DP minimum."],
+["Manajer investasi","Pihak berizin yang mengelola dana reksa dana."],
+["Margin call","Peringatan bahwa ekuitas akun tidak lagi cukup menopang posisi berleverage."],
+["Murabahah","Akad jual beli dengan margin yang disepakati; dipakai dalam KPR syariah."],
+["Musyarakah mutanaqisah","Akad kepemilikan bersama yang porsinya berpindah bertahap ke nasabah."],
+["NAB/UP","Nilai aktiva bersih per unit penyertaan; harga satu unit reksa dana."],
+["NPOPTKP","Nilai perolehan tidak kena pajak, pengurang dalam perhitungan BPHTB."],
+["Obligasi","Surat utang; pemegangnya menerima kupon dan pengembalian pokok saat jatuh tempo."],
+["ORI","Obligasi Negara Ritel berkupon tetap yang dapat diperdagangkan di pasar sekunder."],
+["OJK","Otoritas Jasa Keuangan; mengawasi perbankan, pasar modal, dan industri keuangan non-bank."],
+["PBV","Rasio harga saham terhadap nilai buku per saham."],
+["PER","Rasio harga saham terhadap laba per saham."],
+["PPAT","Pejabat Pembuat Akta Tanah, berwenang membuat akta peralihan hak atas tanah."],
+["PPJB","Perjanjian Pengikatan Jual Beli, umum dipakai pada pembelian rumah indent."],
+["Pip","Satuan pergerakan harga terkecil pada pasangan mata uang."],
+["Provisi","Biaya di muka yang dipungut bank atas pemberian kredit."],
+["RDN","Rekening Dana Nasabah atas nama investor untuk transaksi efek."],
+["Rebalancing","Mengembalikan proporsi portofolio ke alokasi rencana secara berkala."],
+["Reksa dana","Wadah investasi kolektif yang dikelola manajer investasi."],
+["ROE","Rasio laba bersih terhadap ekuitas; ukuran efisiensi penggunaan modal pemegang saham."],
+["SBN","Surat Berharga Negara; surat utang atau sukuk yang diterbitkan pemerintah."],
+["SBR","Savings Bond Ritel; SBN berkupon mengambang dengan batas bawah."],
+["SHM","Sertifikat Hak Milik; bentuk hak atas tanah yang paling kuat."],
+["SLIK","Sistem Layanan Informasi Keuangan OJK; berisi riwayat kredit seseorang."],
+["Spread","Selisih harga beli dan harga jual; biaya yang langsung ditanggung saat bertransaksi."],
+["ST","Sukuk Tabungan; SBN syariah berimbalan mengambang dengan batas bawah."],
+["Sukuk Ritel (SR)","SBN syariah berimbalan tetap yang dapat diperdagangkan di pasar sekunder."],
+["Swap","Bunga menginap atas posisi berjangka yang dibawa melewati hari."],
+["Take over KPR","Memindahkan KPR ke bank lain, biasanya untuk mendapat bunga lebih rendah."],
+["Tenor","Jangka waktu pinjaman atau instrumen investasi."],
+["Unit link","Produk gabungan asuransi dan investasi dengan biaya akuisisi besar di tahun awal."],
+["Yield","Imbal hasil sebuah instrumen, umumnya dinyatakan per tahun."]
+];
+(function(){
+  var ul=$("daftar-kamus"); if(!ul)return;
+  kamus.sort(function(a,b){return a[0].localeCompare(b[0],"id")});
+  ul.innerHTML=kamus.map(function(k){
+    return '<li><dl><dt>'+k[0]+'</dt><dd>'+k[1]+'</dd></dl></li>';
+  }).join("");
+  var cari=$("cari-kamus"), kosong=$("kamus-kosong");
+  cari.addEventListener("input",function(){
+    var q=this.value.toLowerCase().trim(), ada=0;
+    Array.prototype.forEach.call(ul.children,function(li){
+      var cocok = !q || li.textContent.toLowerCase().indexOf(q)>-1;
+      li.classList.toggle("sembunyi",!cocok);
+      if(cocok)ada++;
+    });
+    kosong.style.display = ada? "none":"block";
+  });
+})();
+})();
+</script>
+</body>
+</html>
