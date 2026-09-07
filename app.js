@@ -1,4 +1,4 @@
-/* Celengan — perilaku bersama di semua halaman: format rupiah,
+/* Cemerlang.id · perilaku bersama di semua halaman: format rupiah,
    toggle menu mobile, tombol kembali ke atas, dan reveal saat discroll. */
 window.Celengan = (function(){
 "use strict";
