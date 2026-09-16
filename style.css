@@ -91,10 +91,10 @@ strong{font-weight:600}
 .tombol{
   display:inline-block;border:0;cursor:pointer;text-decoration:none;
   font-family:var(--f-body);font-weight:600;font-size:1rem;
-  padding:13px 22px;border-radius:6px;background:var(--tinta);color:var(--kertas);
-  transition:transform .12s ease;
+  padding:13px 22px;border-radius:10px;background:var(--tinta);color:var(--kertas);
+  transition:transform .15s ease,box-shadow .15s ease;
 }
-.tombol:hover{transform:translateY(-2px)}
+.tombol:hover{transform:translateY(-2px);box-shadow:0 12px 22px -12px var(--tinta)}
 .tombol.hantu{background:transparent;color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--tinta-30)}
 
 /* ---------- lembar uang ---------- */
@@ -145,9 +145,9 @@ strong{font-weight:600}
 .kartu-jalur{
   display:block;text-decoration:none;background:var(--kertas-2);
   border:1px solid var(--garis);border-left:5px solid var(--c);
-  border-radius:10px;padding:22px 22px 20px;transition:background .15s,transform .15s,box-shadow .15s;
+  border-radius:16px;padding:22px 22px 20px;transition:background .18s,transform .18s cubic-bezier(.2,.8,.3,1),box-shadow .18s,border-color .18s;
 }
-.kartu-jalur:hover{background:#fff;transform:translateY(-3px);box-shadow:0 8px 16px -10px color-mix(in srgb,var(--tinta) 25%, transparent)}
+.kartu-jalur:hover{background:#fff;transform:translateY(-4px);box-shadow:0 18px 34px -20px color-mix(in srgb,var(--c) 65%, transparent);border-color:color-mix(in srgb,var(--c) 45%, var(--garis))}
 .kartu-jalur .ikon-badge{width:40px;height:40px;border-radius:10px;margin-bottom:14px}
 .kartu-jalur .ikon-badge .ic{width:21px;height:21px}
 .kartu-jalur h3{margin-bottom:7px;font-size:1.22rem}
@@ -155,21 +155,37 @@ strong{font-weight:600}
 .kartu-jalur .meta{margin-top:13px;font-size:.79rem;color:color-mix(in srgb,var(--c) 45%, var(--tinta));font-weight:600;display:flex;align-items:center;gap:6px}
 
 /* isi materi */
-.modul{border-top:1px solid var(--garis);padding:clamp(48px,6vw,80px) 0}
+.modul{border-top:1px solid var(--garis);padding:clamp(48px,6vw,80px) 0;position:relative;overflow:hidden}
+.modul::before{
+  content:"";position:absolute;inset:-8% -10% auto -10%;height:58%;z-index:0;pointer-events:none;
+  background:radial-gradient(40% 65% at 12% 0%,color-mix(in srgb,var(--c) 32%, transparent),transparent 72%);
+  filter:blur(70px);opacity:.32;
+}
+.modul > .wrap{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.modul::before{opacity:.18}}
 .modul-kepala{border-left:5px solid var(--c);padding-left:18px;margin-bottom:34px;display:flex;gap:18px;align-items:flex-start}
 .modul-kepala .ikon-badge{margin-top:2px}
-.modul-kepala h2{margin-bottom:10px}
+.modul-kepala h2{
+  margin-bottom:10px;
+  background:linear-gradient(120deg,var(--tinta) 30%,var(--c) 130%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
 .modul-kepala p{color:var(--tinta-60);max-width:56ch;margin:0}
 @media(max-width:560px){.modul-kepala{gap:14px}.modul-kepala .ikon-badge{width:38px;height:38px;border-radius:10px}.modul-kepala .ikon-badge .ic{width:20px;height:20px}}
-.bab{margin-bottom:44px}
-.bab > h3{margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--c)}
+.bab{margin-bottom:48px}
+.bab > h3{margin-bottom:18px;padding:6px 0 16px;border-bottom:1px solid var(--garis);position:relative}
+.bab > h3::after{content:"";position:absolute;left:0;bottom:-1px;width:58px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 15%, transparent));box-shadow:0 0 14px -1px var(--c)}
 .bab > h3 + p{margin-top:0}
 
 .catatan{
-  border-radius:8px;padding:17px 19px;margin:0 0 22px;
-  background:color-mix(in srgb,var(--c) 11%, var(--kertas-2));
-  border-left:4px solid var(--c);max-width:var(--teks);
+  position:relative;overflow:hidden;
+  border-radius:14px;padding:18px 20px 18px 23px;margin:0 0 22px;
+  background:linear-gradient(155deg,color-mix(in srgb,var(--c) 13%, var(--kertas-2)),var(--kertas-2) 65%);
+  border:1px solid color-mix(in srgb,var(--c) 26%, var(--garis));
+  box-shadow:0 16px 30px -26px color-mix(in srgb,var(--c) 75%, transparent);
+  max-width:var(--teks);
 }
+.catatan::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--c),color-mix(in srgb,var(--c) 25%, transparent))}
 .catatan h4{margin-bottom:6px;color:color-mix(in srgb,var(--c) 45%, var(--tinta));display:flex;align-items:center;gap:8px}
 .catatan h4 .ic{width:17px;height:17px;stroke-width:2}
 .catatan p:last-child,.catatan ul:last-child{margin-bottom:0}
@@ -187,9 +203,12 @@ td:first-child{font-weight:500}
 
 /* alat hitung */
 .alat{
-  background:var(--kertas-2);border:1px solid var(--garis);border-radius:10px;
-  padding:clamp(20px,3vw,30px);margin:30px 0 34px;
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#fff,var(--kertas-2));border:1px solid var(--garis);border-radius:18px;
+  padding:clamp(22px,3vw,32px);margin:32px 0 36px;
+  box-shadow:0 28px 52px -34px color-mix(in srgb,var(--c,var(--tinta)) 60%, transparent);
 }
+.alat::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--c,var(--tinta)),transparent)}
 .alat-judul{display:flex;align-items:center;gap:14px;margin-bottom:6px}
 .alat-judul .ikon-badge{width:38px;height:38px;border-radius:10px}
 .alat-judul .ikon-badge .ic{width:20px;height:20px}
@@ -201,7 +220,7 @@ td:first-child{font-weight:500}
 .isian label{display:block;font-size:.85rem;font-weight:600;margin-bottom:5px}
 .isian .satuan{font-weight:400;color:var(--tinta-60)}
 .isian input[type=text],.isian input[type=number],.isian select{
-  width:100%;padding:11px 13px;border:1.5px solid var(--tinta-30);border-radius:6px;
+  width:100%;padding:11px 13px;border:1.5px solid var(--tinta-30);border-radius:9px;
   font:inherit;font-size:1rem;background:#fff;color:var(--tinta);font-variant-numeric:tabular-nums;transition:border-color .15s,box-shadow .15s;
 }
 .isian input[type=text]:focus-visible,.isian input[type=number]:focus-visible,.isian select:focus-visible{
@@ -209,13 +228,13 @@ td:first-child{font-weight:500}
 }
 .isian input[type=range]{width:100%;accent-color:var(--c,var(--tinta))}
 .isian .nilai-range{float:right;font-weight:600;font-variant-numeric:tabular-nums}
-.hasil{background:#fff;border:1px solid var(--garis);border-radius:8px;padding:20px}
+.hasil{background:#fff;border:1px solid var(--garis);border-radius:14px;padding:20px;box-shadow:0 16px 32px -28px color-mix(in srgb,var(--c,var(--tinta)) 65%, transparent)}
 .hasil-utama{font-family:var(--f-mono);font-weight:600;font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.01em;line-height:1.05;font-variant-numeric:tabular-nums}
 .hasil-label{font-size:.84rem;color:var(--tinta-60);margin-bottom:2px}
 .hasil-baris{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--garis);font-size:.93rem;font-variant-numeric:tabular-nums}
 .hasil-baris:last-child{border-bottom:0}
 .hasil-baris span:last-child{font-weight:600;text-align:right}
-.verdict{margin-top:14px;padding:12px 14px;border-radius:4px;font-size:.9rem;line-height:1.45}
+.verdict{margin-top:14px;padding:12px 14px;border-radius:8px;font-size:.9rem;line-height:1.45}
 .verdict.aman{background:color-mix(in srgb,var(--n20) 16%, var(--kertas-2));border-left:4px solid var(--n20)}
 .verdict.hati{background:color-mix(in srgb,var(--n1) 20%, var(--kertas-2));border-left:4px solid var(--n1)}
 .verdict.bahaya{background:color-mix(in srgb,var(--n100) 14%, var(--kertas-2));border-left:4px solid var(--n100)}
@@ -228,30 +247,35 @@ td:first-child{font-weight:500}
 svg.grafik{width:100%;height:auto;display:block;margin-top:8px}
 
 /* akordeon */
-.lipat{border-bottom:1px solid var(--garis);max-width:var(--teks)}
+.lipat-grup{display:flex;flex-direction:column;gap:10px;max-width:var(--teks)}
+.lipat{
+  border:1px solid var(--garis);border-radius:12px;padding:0 20px;background:var(--kertas-2);
+  transition:border-color .18s,box-shadow .18s,background .18s;
+}
+.lipat[open]{border-color:color-mix(in srgb,var(--c,var(--n50)) 40%, var(--garis));background:#fff;box-shadow:0 14px 28px -24px color-mix(in srgb,var(--c,var(--n50)) 70%, transparent)}
 .lipat summary{
   cursor:pointer;padding:15px 30px 15px 0;font-family:var(--f-display);font-weight:600;
   font-size:1.05rem;list-style:none;position:relative;
 }
 .lipat summary::-webkit-details-marker{display:none}
-.lipat summary::after{content:"+";position:absolute;right:4px;top:13px;font-size:1.4rem;font-weight:400;color:var(--tinta-60)}
-.lipat[open] summary::after{content:"–"}
+.lipat summary::after{content:"+";position:absolute;right:4px;top:13px;font-size:1.4rem;font-weight:400;color:var(--tinta-60);transition:transform .18s,color .18s}
+.lipat[open] summary::after{content:"–";color:var(--c,var(--n50))}
 .lipat .lipat-isi{padding-bottom:18px}
 .lipat .lipat-isi > :last-child{margin-bottom:0}
 
 /* kuis */
-.kuis-kartu{background:var(--kertas-2);border:1px solid var(--garis);border-radius:10px;padding:clamp(20px,3vw,30px);max-width:74ch}
-.opsi{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--tinta-30);border-radius:6px;padding:13px 16px;margin-bottom:9px;font:inherit;font-size:.97rem;cursor:pointer;transition:border-color .12s,background .12s,transform .12s}
-.opsi:hover{border-color:var(--tinta);transform:translateX(2px)}
+.kuis-kartu{background:var(--kertas-2);border:1px solid var(--garis);border-radius:18px;padding:clamp(20px,3vw,30px);max-width:74ch;box-shadow:0 24px 48px -34px color-mix(in srgb,var(--tinta) 55%, transparent)}
+.opsi{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--tinta-30);border-radius:10px;padding:13px 16px;margin-bottom:9px;font:inherit;font-size:.97rem;cursor:pointer;transition:border-color .12s,background .12s,transform .12s,box-shadow .12s}
+.opsi:hover{border-color:var(--tinta);transform:translateX(2px);box-shadow:0 8px 18px -14px var(--tinta)}
 .opsi.benar{border-color:var(--n20);background:color-mix(in srgb,var(--n20) 13%, #fff)}
 .opsi.salah{border-color:var(--n100);background:color-mix(in srgb,var(--n100) 11%, #fff)}
 .opsi:disabled{cursor:default}
-.kuis-jelas{font-size:.92rem;background:#fff;border-left:4px solid var(--tinta);padding:13px 15px;border-radius:6px;margin-top:12px}
+.kuis-jelas{font-size:.92rem;background:#fff;border-left:4px solid var(--tinta);padding:13px 15px;border-radius:8px;margin-top:12px}
 .kuis-nav{display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
 .kuis-skor{font-size:.87rem;color:var(--tinta-60);margin-left:auto;font-variant-numeric:tabular-nums}
 
 /* kamus */
-.cari-kamus{width:100%;max-width:420px;padding:12px 15px;border:1.5px solid var(--tinta-30);border-radius:6px;font:inherit;background:#fff;margin-bottom:24px;transition:border-color .15s,box-shadow .15s}
+.cari-kamus{width:100%;max-width:420px;padding:12px 15px;border:1.5px solid var(--tinta-30);border-radius:10px;font:inherit;background:#fff;margin-bottom:24px;transition:border-color .15s,box-shadow .15s}
 .cari-kamus:focus-visible{border-color:var(--n50);box-shadow:0 0 0 4px color-mix(in srgb,var(--n50) 18%, transparent);outline:none}
 .kamus{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px 26px;list-style:none;padding:0}
 .kamus li{padding:11px 0;border-bottom:1px solid var(--garis);font-size:.92rem}
@@ -281,8 +305,10 @@ footer a:hover{color:#fff}
 /* ---------- ikon ---------- */
 .ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .ikon-badge{
-  width:46px;height:46px;border-radius:10px;display:grid;place-items:center;flex-shrink:0;
-  background:color-mix(in srgb,var(--c) 16%, transparent);color:color-mix(in srgb,var(--c) 60%, var(--tinta) 40%);
+  width:46px;height:46px;border-radius:13px;display:grid;place-items:center;flex-shrink:0;
+  background:radial-gradient(120% 120% at 25% 15%,color-mix(in srgb,var(--c) 32%, transparent),color-mix(in srgb,var(--c) 12%, transparent));
+  color:color-mix(in srgb,var(--c) 65%, var(--tinta) 35%);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--c) 22%, transparent) inset, 0 6px 16px -9px var(--c);
 }
 .ikon-badge .ic{width:24px;height:24px}
 .navtoggle .ic{width:18px;height:18px}
@@ -327,22 +353,30 @@ footer a:hover{color:#fff}
 /* ---------- nav aktif ---------- */
 .navlink a.aktif{color:var(--tinta);border-color:var(--n50)}
 
-/* ---------- saham: subnav dalam halaman ---------- */
+/* ---------- subnav: lompat ke subbab dalam halaman ---------- */
 .subnav{
-  display:flex;flex-wrap:wrap;gap:8px;margin:0 0 36px;padding:16px 18px;
-  background:var(--kertas-2);border:1px solid var(--garis);border-radius:8px;
+  display:flex;flex-wrap:wrap;gap:9px;margin:0 0 38px;padding:18px 20px;
+  background:linear-gradient(155deg,color-mix(in srgb,var(--c) 9%, var(--kertas-2)),var(--kertas-2));
+  border:1px solid var(--garis);border-radius:16px;
+  box-shadow:0 18px 36px -30px color-mix(in srgb,var(--c) 65%, transparent);
 }
-.subnav span{font-size:.74rem;color:var(--tinta-60);width:100%;margin-bottom:2px;font-family:var(--f-mono);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+.subnav span{font-size:.72rem;color:var(--tinta-60);width:100%;margin-bottom:3px;font-family:var(--f-mono);font-weight:500;letter-spacing:.07em;text-transform:uppercase}
 .subnav a{
-  font-size:.85rem;text-decoration:none;color:var(--tinta);background:var(--kertas);
-  border:1px solid var(--garis);border-radius:6px;padding:6px 13px;transition:border-color .15s,background .15s;
+  font-size:.84rem;text-decoration:none;color:var(--tinta-60);background:var(--kertas-2);
+  border:1px solid var(--garis);border-radius:999px;padding:7px 15px;
+  transition:border-color .15s,background .15s,color .15s,box-shadow .15s,transform .15s;
 }
-.subnav a:hover{border-color:var(--c,var(--n50));background:#fff}
+.subnav a:hover{border-color:var(--c,var(--n50));background:#fff;color:var(--tinta);transform:translateY(-1px)}
+.subnav a.aktif{
+  color:var(--kertas);background:var(--c,var(--n50));border-color:transparent;
+  box-shadow:0 8px 18px -8px var(--c,var(--n50));
+}
 
 /* ---------- saham: studi kasus ---------- */
 .kasus{
-  border:1px solid var(--garis);border-radius:10px;background:var(--kertas-2);
+  border:1px solid var(--garis);border-radius:16px;background:var(--kertas-2);
   margin:22px 0 26px;overflow:hidden;
+  box-shadow:0 18px 36px -30px color-mix(in srgb,var(--c,var(--tinta)) 65%, transparent);
 }
 .kasus-kepala{
   padding:16px 20px;border-bottom:1px solid var(--garis);background:#fff;
@@ -376,7 +410,8 @@ footer a:hover{color:#fff}
 
 /* ---------- saham: dua kolom bandingkan ---------- */
 .dua-kolom{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:0 0 22px}
-.dua-kolom > div{background:var(--kertas-2);border:1px solid var(--garis);border-radius:8px;padding:16px 18px}
+.dua-kolom > div{background:var(--kertas-2);border:1px solid var(--garis);border-radius:14px;padding:16px 18px;transition:transform .15s,box-shadow .15s}
+.dua-kolom > div:hover{transform:translateY(-2px);box-shadow:0 14px 26px -22px color-mix(in srgb,var(--tinta) 40%, transparent)}
 .dua-kolom .judul{font-family:var(--f-mono);font-size:.72rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px;display:block}
 .dua-kolom .judul.ok{color:color-mix(in srgb,var(--n20) 60%, var(--tinta))}
 .dua-kolom .judul.no{color:color-mix(in srgb,var(--n100) 60%, var(--tinta))}

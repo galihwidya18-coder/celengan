@@ -62,6 +62,29 @@ function bulanKeTeks(m){
   });
 })();
 
+/* ---------- subnav: menandai subbab aktif saat discroll ---------- */
+(function(){
+  var nav = document.querySelector(".subnav"); if(!nav)return;
+  var links = Array.prototype.slice.call(nav.querySelectorAll("a[href^='#']"));
+  if(!links.length || !("IntersectionObserver" in window))return;
+  var peta = {};
+  links.forEach(function(a){
+    var target = document.getElementById(a.getAttribute("href").slice(1));
+    if(target)peta[target.id]=a;
+  });
+  var ids = Object.keys(peta); if(!ids.length)return;
+  var aktif=null;
+  function setAktif(id){
+    if(id===aktif)return; aktif=id;
+    links.forEach(function(a){ a.classList.remove("aktif"); });
+    if(peta[id])peta[id].classList.add("aktif");
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting)setAktif(e.target.id); });
+  },{rootMargin:"-30% 0px -60% 0px",threshold:0});
+  ids.forEach(function(id){ io.observe(document.getElementById(id)); });
+})();
+
 /* ---------- polesan Motion: umpan-balik tekan & kedip hasil kalkulator ----------
    Progressive enhancement murni: kalau CDN gagal dimuat, browser tak dukung
    dynamic import, atau pengguna minta gerak berkurang, situs tetap berjalan
