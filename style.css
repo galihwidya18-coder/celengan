@@ -332,3 +332,59 @@ footer a:hover{color:#fff}
 
 /* ---------- nav aktif ---------- */
 .navlink a.aktif{color:var(--tinta);border-color:var(--n50)}
+
+/* ---------- saham: subnav dalam halaman ---------- */
+.subnav{
+  display:flex;flex-wrap:wrap;gap:8px;margin:0 0 36px;padding:16px 18px;
+  background:var(--kertas-2);border:1px solid var(--garis);border-radius:14px;
+}
+.subnav span{font-size:.79rem;color:var(--tinta-60);width:100%;margin-bottom:2px;font-family:var(--f-display);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+.subnav a{
+  font-size:.85rem;text-decoration:none;color:var(--tinta);background:var(--kertas);
+  border:1px solid var(--garis);border-radius:999px;padding:6px 13px;transition:border-color .15s,background .15s;
+}
+.subnav a:hover{border-color:var(--c,var(--n50));background:#fff}
+
+/* ---------- saham: studi kasus ---------- */
+.kasus{
+  border:1px solid var(--garis);border-radius:16px;background:var(--kertas-2);
+  margin:22px 0 26px;overflow:hidden;
+}
+.kasus-kepala{
+  padding:16px 20px;border-bottom:1px solid var(--garis);background:#fff;
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px;
+}
+.kasus-kepala .label{display:block;font-family:var(--f-display);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:color-mix(in srgb,var(--c,var(--n50)) 55%, var(--tinta));margin-bottom:3px}
+.kasus-kepala h4{font-size:1.2rem}
+.kasus-kepala .waktu{font-size:.8rem;color:var(--tinta-60);white-space:nowrap;font-variant-numeric:tabular-nums}
+.kasus-fakta{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;
+  padding:14px 20px;background:var(--kertas);border-bottom:1px solid var(--garis);
+}
+.kasus-fakta div{display:flex;flex-direction:column;gap:1px}
+.kasus-fakta span{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--tinta-60)}
+.kasus-fakta b{font-family:var(--f-display);font-size:1.05rem;font-variant-numeric:tabular-nums}
+.kasus-fakta b.turun{color:var(--n100)}
+.kasus-fakta b.naik{color:var(--n20)}
+.kasus-isi{padding:18px 20px}
+.kasus-isi > :last-child{margin-bottom:0}
+.kasus-pelajaran{
+  margin:16px 0 0;padding:14px 16px;border-left:4px solid var(--n20);
+  background:color-mix(in srgb,var(--n20) 11%, #fff);border-radius:0 10px 10px 0;
+}
+.kasus-pelajaran .label{display:block;font-family:var(--f-display);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:color-mix(in srgb,var(--n20) 55%, var(--tinta));margin-bottom:6px}
+.kasus-pelajaran ul{margin:0;padding-left:18px}
+.kasus-pelajaran li:last-child{margin-bottom:0}
+.kasus-sumber{
+  padding:12px 20px;border-top:1px solid var(--garis);background:#fff;
+  font-size:.78rem;color:var(--tinta-60);line-height:1.5;
+}
+
+/* ---------- saham: dua kolom bandingkan ---------- */
+.dua-kolom{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:0 0 22px}
+.dua-kolom > div{background:var(--kertas-2);border:1px solid var(--garis);border-radius:14px;padding:16px 18px}
+.dua-kolom .judul{font-family:var(--f-display);font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;display:block}
+.dua-kolom .judul.ok{color:color-mix(in srgb,var(--n20) 60%, var(--tinta))}
+.dua-kolom .judul.no{color:color-mix(in srgb,var(--n100) 60%, var(--tinta))}
+.dua-kolom ul{margin:0;padding-left:18px;font-size:.92rem}
+.dua-kolom li:last-child{margin-bottom:0}

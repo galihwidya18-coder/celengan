@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saham · Cemerlang.id</title>
-<meta name="description" content="Mekanisme dasar bursa, membaca laporan keuangan, rasio valuasi, dan disiplin diversifikasi, plus tes profil risiko investasi.">
+<meta name="description" content="Mekanisme bursa, biaya transaksi, membaca laporan keuangan, rasio valuasi, analisis teknikal, orderbook, dan manajemen risiko, lengkap dengan studi kasus emiten nyata dan tes profil risiko.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cemerlang.id">
 <meta property="og:locale" content="id_ID">
 <meta property="og:title" content="Saham · Cemerlang.id">
-<meta property="og:description" content="Mekanisme dasar bursa, membaca laporan keuangan, rasio valuasi, dan disiplin diversifikasi, plus tes profil risiko investasi.">
+<meta property="og:description" content="Mekanisme bursa, biaya transaksi, membaca laporan keuangan, rasio valuasi, analisis teknikal, orderbook, dan manajemen risiko, lengkap dengan studi kasus emiten nyata dan tes profil risiko.">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Saham · Cemerlang.id">
-<meta name="twitter:description" content="Mekanisme dasar bursa, membaca laporan keuangan, rasio valuasi, dan disiplin diversifikasi, plus tes profil risiko investasi.">
+<meta name="twitter:description" content="Mekanisme bursa, biaya transaksi, membaca laporan keuangan, rasio valuasi, analisis teknikal, orderbook, dan manajemen risiko, lengkap dengan studi kasus emiten nyata dan tes profil risiko.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,88 +55,676 @@
       <div>
         <div class="sec-kepala"><span class="pecahan">Rp50.000</span></div>
         <h2>Saham</h2>
-        <p>Beli saham artinya beli sepotong kecil kepemilikan sebuah perusahaan. Ingat itu terus, dan sebagian besar kesalahan mahal di jalur ini sebenarnya bisa dihindari.</p>
+        <p>Beli saham artinya beli sepotong kecil kepemilikan sebuah perusahaan. Ingat itu terus, dan sebagian besar kesalahan mahal di jalur ini sebenarnya bisa dihindari. Modul ini panjang sengaja: dari mekanisme bursa dan biaya transaksi, membaca laporan keuangan dan rasio valuasi, analisis teknikal dan orderbook, sampai manajemen risiko dan memilih jalur yang cocok dengan waktumu, masing-masing ditutup studi kasus emiten nyata yang peristiwanya sudah selesai.</p>
       </div>
     </div>
 
-    <div class="bab">
-      <h3>6.1 Mekanisme dasar</h3>
+    <nav class="subnav" aria-label="Lompat ke subbab">
+      <span>Lompat ke</span>
+      <a href="#mekanisme">6.1 Mekanisme &amp; lembaga</a>
+      <a href="#biaya">6.2 Biaya &amp; titik impas</a>
+      <a href="#batas">6.3 Auto reject &amp; halt</a>
+      <a href="#aksi">6.4 Aksi korporasi &amp; order</a>
+      <a href="#lapkeu">6.5 Laporan keuangan</a>
+      <a href="#rasio">6.6 Rasio &amp; tanda bahaya</a>
+      <a href="#valuasi">6.7 Valuasi lanjutan</a>
+      <a href="#teknikal">6.8 Teknikal &amp; candlestick</a>
+      <a href="#orderbook">6.9 Orderbook &amp; aliran dana</a>
+      <a href="#risiko-bab">6.10 Manajemen risiko</a>
+      <a href="#jalur">6.11 Pilih jalur &amp; diversifikasi</a>
+      <a href="#istilah">6.12 Kamus istilah saham</a>
+    </nav>
+
+    <div class="bab" id="mekanisme">
+      <h3>6.1 Mekanisme dasar &amp; lembaga bursa</h3>
       <div class="teks">
-        <ul>
-          <li><strong>Rekening efek.</strong> Dibuka lewat perusahaan sekuritas anggota bursa. Ada RDN (rekening dana nasabah) atas namamu sendiri di bank. Dana tidak boleh bercampur dengan rekening sekuritas.</li>
-          <li><strong>Satuan.</strong> 1 lot = 100 lembar. Saham Rp1.500 berarti minimal beli Rp150.000.</li>
-          <li><strong>Biaya.</strong> Fee beli sekitar 0,15–0,2%, fee jual sekitar 0,25–0,3% karena ditambah PPh final 0,1% dari nilai transaksi. Trading harian membuat biaya ini menumpuk cepat.</li>
-          <li><strong>Penyelesaian.</strong> Transaksi diselesaikan T+2 hari bursa.</li>
-          <li><strong>Auto reject.</strong> Bursa membatasi kenaikan (ARA) dan penurunan (ARB) harian per saham. Saham yang menyentuh ARB berhari-hari bisa membuatmu tidak bisa keluar.</li>
-        </ul>
+        <p>Ada dua sumber imbal hasil saham, dan asalnya berbeda. <strong>Dividen</strong> berasal dari laba yang dibagikan perusahaan: perusahaan jualan, dapat laba, sebagian dibagi ke pemegang saham. <strong>Capital gain</strong> berasal dari pembeli berikutnya yang bersedia bayar lebih mahal daripada harga belimu, jadi sumbernya bukan kinerja perusahaan melainkan perilaku pelaku pasar lain. Kalau targetmu dividen, yang relevan adalah kemampuan perusahaan menghasilkan kas berulang. Kalau targetmu capital gain jangka pendek, yang relevan adalah perilaku pasar. Mencampur keduanya, misalnya beli karena fundamental bagus lalu panik jual karena harga turun dua minggu, adalah sumber kesalahan paling umum.</p>
       </div>
-      <div class="catatan awas">
-        <h4><svg class="ic"><use href="icons.svg#ic-warn"/></svg> Papan pemantauan khusus dan saham gorengan</h4>
-        <p>Saham berkapitalisasi kecil dengan volume tipis mudah digerakkan segelintir pihak. Polanya khas: naik ratusan persen dalam beberapa pekan tanpa perubahan kinerja, dipromosikan ramai-ramai di grup, lalu jatuh dan tidak bisa dijual. Periksa likuiditas harian dan kinerja keuangan sebelum tergoda.</p>
-      </div>
-    </div>
-
-    <div class="bab">
-      <h3>6.2 Dari mana keuntungan saham datang</h3>
-      <div class="teks">
-        <p><strong>Capital gain</strong>: selisih harga jual dan beli. <strong>Dividen</strong>: bagian laba yang dibagikan, dipotong PPh final untuk wajib pajak orang pribadi, kecuali memenuhi syarat reinvestasi tertentu.</p>
-        <p>Tanggal yang perlu kamu tahu: <em>cum date</em> (batas terakhir memegang saham untuk berhak dividen) dan <em>ex date</em> (sehari setelahnya, pembeli baru tidak lagi berhak). Harga saham biasanya turun sekitar besaran dividen pada ex date, jadi membeli sehari sebelum cum date bukan uang gratis.</p>
-      </div>
-    </div>
-
-    <div class="bab">
-      <h3>6.3 Membaca perusahaan, bukan grafik</h3>
-      <div class="teks"><p>Empat laporan yang perlu kamu buka: laporan laba rugi, neraca, arus kas, dan catatan atas laporan keuangan. Rasio yang paling sering dipakai:</p></div>
       <div class="gulir">
         <table>
-          <tr><th>Rasio</th><th>Rumus</th><th>Apa yang diberitahukan</th></tr>
-          <tr><td>PER</td><td>Harga ÷ laba per saham</td><td>Berapa tahun laba untuk balik modal. Bandingkan hanya dengan perusahaan sesektor.</td></tr>
-          <tr><td>PBV</td><td>Harga ÷ nilai buku per saham</td><td>Berapa kali nilai buku yang kamu bayar. Berguna untuk bank dan perusahaan padat aset.</td></tr>
-          <tr><td>ROE</td><td>Laba bersih ÷ ekuitas</td><td>Seberapa efisien manajemen memutar modal pemegang saham.</td></tr>
-          <tr><td>DER</td><td>Total utang ÷ ekuitas</td><td>Seberapa besar perusahaan bergantung pada utang.</td></tr>
-          <tr><td>Margin laba bersih</td><td>Laba bersih ÷ pendapatan</td><td>Berapa sen yang tersisa dari tiap rupiah penjualan.</td></tr>
-          <tr><td>Dividend yield</td><td>Dividen setahun ÷ harga</td><td>Imbal hasil tunai. Yield sangat tinggi kadang berarti harga sedang jatuh.</td></tr>
+          <tr><th>Lembaga</th><th>Perannya</th></tr>
+          <tr><td>OJK</td><td>Regulator pasar modal: memberi izin, mengawasi, menindak.</td></tr>
+          <tr><td>BEI</td><td>Penyelenggara bursa: sistem perdagangan, papan pencatatan, batas auto reject dan suspensi.</td></tr>
+          <tr><td>KPEI</td><td>Kliring dan penjaminan; memastikan transaksi yang sudah terjadi benar-benar diselesaikan.</td></tr>
+          <tr><td>KSEI</td><td>Penyimpanan dan penyelesaian efek. Sahammu tercatat atas namamu di sini, bukan di sekuritas.</td></tr>
+          <tr><td>Sekuritas</td><td>Perantara yang meneruskan order ke sistem bursa dan memungut komisi.</td></tr>
+          <tr><td>Bank RDN</td><td>Menyimpan danamu di Rekening Dana Nasabah, terpisah dari rekening sekuritas.</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Struktur ini sengaja dipisah supaya kegagalan satu pihak tidak menghapus asetmu: uang tunai ada di bank atas namamu, saham tercatat di KSEI atas namamu, sekuritas cuma perantara. Kamu bisa cek kepemilikanmu sendiri lewat fasilitas <strong>AKSes KSEI</strong> tanpa lewat sekuritas — lakukan sekali setelah rekening aktif.</p>
+      </div>
+      <div class="catatan awas">
+        <h4><svg class="ic"><use href="icons.svg#ic-warn"/></svg> Gerbang, bukan saran kehati-hatian</h4>
+        <p>Tiga syarat ini bukan anjuran, tapi syarat supaya analisa apa pun di halaman ini bisa bekerja: dana darurat sudah ada lebih dulu, tidak ada uang hasil pinjaman, dan tidak ada uang yang dibutuhkan dalam dua belas bulan ke depan. Alasannya mekanis: setiap metode di sini butuh kamu bisa menunggu tesismu terbukti atau terbantah. Uang bertenggat memaksamu keluar pada waktu yang ditentukan tenggat, bukan oleh pasar, dan itu mengubah strategi apa pun jadi undian.</p>
+      </div>
+      <div class="teks">
+        <p><strong>Realitas hasil, sebelum apa pun yang lain.</strong> Barber, Lee, Liu, dan Odean meneliti seluruh populasi <em>day trader</em> di bursa Taiwan sepanjang 1992–2006, bukan sampel pilihan. Pada tahun rata-rata ada sekitar 450 ribu individu yang <em>day trading</em>. Sekitar 20% membukukan imbal hasil abnormal positif setelah biaya pada tahun tertentu, tapi kurang dari 1% — sekitar 4.000 dari 450 ribu orang — yang secara andal untung berulang tahun demi tahun. Yang rugi cenderung terus rugi. Selisih dua angka itulah pelajarannya: untung sekali jauh lebih mudah daripada untung berulang, dan hanya yang kedua layak disebut keterampilan. Metode di halaman ini bukan mesin untung; ia cara membuat keputusan yang bisa diperiksa ulang, supaya kesalahanmu bisa diperbaiki, bukan diulang.</p>
+        <p>Satu lot = 100 lembar saham. Harga hanya bergerak pada kelipatan fraksi (tick), besarnya tergantung rentang harga:</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Rentang harga</th><th>Fraksi</th><th>Nilai 1 tick</th></tr>
+          <tr><td>di bawah Rp200</td><td>Rp1</td><td>0,5–2%</td></tr>
+          <tr><td>Rp200 – di bawah Rp500</td><td>Rp2</td><td>0,4–1%</td></tr>
+          <tr><td>Rp500 – di bawah Rp2.000</td><td>Rp5</td><td>0,25–1%</td></tr>
+          <tr><td>Rp2.000 – di bawah Rp5.000</td><td>Rp10</td><td>0,2–0,5%</td></tr>
+          <tr><td>Rp5.000 ke atas</td><td>Rp25</td><td>0,5% atau kurang</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Kolom terakhir yang justru menentukan biaya bergerakmu: saham Rp202 punya tick 1%, artinya spread satu tick saja memakan dua setengah kali biaya transaksi. Penyelesaian transaksi pasar reguler adalah <strong>T+2</strong> — saham dan uang berpindah dua hari bursa setelahnya. Sesi perdagangan Senin–Kamis: sesi I 09.00–12.00, sesi II 13.30–15.49, dengan pra-pembukaan dan pra-penutupan di sekitarnya; Jumat sesi I sampai 11.30 dan sesi II mulai 14.00. Penutupan ditentukan lelang acak antara 15.58 dan 15.59.59, mekanisme yang sengaja dibuat supaya harga penutupan tidak bisa digerakkan order yang sengaja dimasukkan detik terakhir (praktik ini disebut <em>marking the close</em>).</p>
+        <p>Tiga jenis pasar: <strong>reguler</strong> (tempat hampir semua transaksi, dijodohkan otomatis berdasar prioritas harga lalu waktu), <strong>tunai</strong> (penyelesaian T+0, biasa untuk menutup kewajiban), dan <strong>negosiasi</strong> (kesepakatan langsung dua pihak, harga tidak selalu mencerminkan pasar — transaksi tutup sendiri atau <em>crossing</em> sering muncul di sini, salah satu sebab data broker summary bisa menyesatkan).</p>
+      </div>
+    </div>
+
+    <div class="bab" id="biaya">
+      <h3>6.2 Biaya transaksi &amp; titik impas</h3>
+      <div class="teks">
+        <p>Setiap transaksi kena beberapa komponen sekaligus. Yang beda antar sekuritas cuma komisinya, sisanya ditentukan regulator.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Komponen</th><th>Beli</th><th>Jual</th><th>Keterangan</th></tr>
+          <tr><td>Komisi sekuritas</td><td>0,10–0,19%</td><td>0,20–0,29%</td><td>Biasanya sudah termasuk levy &amp; PPN pada tarif yang diiklankan</td></tr>
+          <tr><td>Levy bursa</td><td colspan="2">sekitar 0,04%</td><td>Gabungan jasa BEI, KPEI, KSEI, dan dana jaminan</td></tr>
+          <tr><td>PPN atas komisi</td><td colspan="2">sekitar 11–12%</td><td>Dihitung dari komisi, bukan dari nilai transaksi</td></tr>
+          <tr><td>PPh final</td><td>tidak ada</td><td>0,1%</td><td>Dari nilai bruto penjualan, final, tidak peduli untung atau rugi</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Sejak 1 Januari 2025 tarif PPN naik jadi 12%, tapi untuk jasa non-mewah dasar pengenaannya memakai nilai lain sebesar 11/12 dari nilai jasa, sehingga beban efektifnya tetap setara 11%. Angka publik soal ini masih simpang siur; pakai tarif di konfirmasi transaksi sekuritasmu sendiri, bukan angka di tabel ini — tarif komisi juga beda-beda antar sekuritas dan bisa berubah.</p>
+        <p>Konsekuensinya: dengan fee beli 0,15% dan fee jual 0,25%, satu transaksi baru impas kalau harga naik sekitar 0,40%. Untuk saham Rp1.000 dengan fraksi Rp5, itu persis satu tick di atas harga beli. Kalau kamu bertransaksi lima kali sehari, biaya 0,40% per putaran jadi 2% modal per hari — sebelum satu pun keputusan analisamu terbukti benar.</p>
+      </div>
+
+      <div class="alat" id="impas" style="--c:var(--n50)">
+        <div class="alat-judul"><span class="ikon-badge"><svg class="ic"><use href="icons.svg#ic-calc"/></svg></span><h3>Alat hitung: titik impas transaksi</h3></div>
+        <p class="alat-ket">Berapa persen harga harus naik supaya satu transaksi tidak rugi, setelah fee beli dan fee jual dihitung.</p>
+        <div class="alat-grid">
+          <div>
+            <div class="isian">
+              <label for="ib-harga">Harga beli <span class="satuan">(Rp)</span></label>
+              <input type="text" id="ib-harga" inputmode="numeric" value="1.000">
+            </div>
+            <div class="isian">
+              <label for="ib-lot">Jumlah lot</label>
+              <input type="text" id="ib-lot" inputmode="numeric" value="10">
+            </div>
+            <div class="isian">
+              <label for="ib-feeb">Fee beli <span class="nilai-range" id="ib-feeb-v">0,15%</span></label>
+              <input type="range" id="ib-feeb" min="0" max="0.5" step="0.01" value="0.15">
+            </div>
+            <div class="isian">
+              <label for="ib-feej">Fee jual <span class="nilai-range" id="ib-feej-v">0,25%</span></label>
+              <input type="range" id="ib-feej" min="0" max="0.6" step="0.01" value="0.25">
+            </div>
+          </div>
+          <div class="hasil">
+            <div class="hasil-label">Harga impas</div>
+            <div class="hasil-utama" id="ib-impas">Rp1.005</div>
+            <div style="margin-top:16px">
+              <div class="hasil-baris"><span>Modal keluar</span><span id="ib-modal">Rp100.150</span></div>
+              <div class="hasil-baris"><span>Kenaikan minimum</span><span id="ib-persen">0,50%</span></div>
+              <div class="hasil-baris"><span>Total biaya beli+jual</span><span id="ib-total">Rp650</span></div>
+            </div>
+            <p style="font-size:.83rem;color:var(--tinta-60);margin:14px 0 0">Harga impas dibulatkan naik ke fraksi harga terdekat, karena kamu cuma bisa memasang harga jual pada kelipatan tick. Kalau kamu bertransaksi berkali-kali sehari, hitung ulang dengan lot dan harga yang sesuai kebiasaanmu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bab" id="batas">
+      <h3>6.3 Auto rejection, trading halt &amp; papan pencatatan</h3>
+      <div class="teks">
+        <p>BEI membatasi seberapa jauh harga boleh bergerak sehari. Order di luar batas ditolak sistem otomatis: batas atas <strong>ARA</strong>, batas bawah <strong>ARB</strong>.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Kelompok harga acuan</th><th>ARA</th><th>ARB</th></tr>
+          <tr><td>Rp50 – Rp200</td><td>35%</td><td>15%</td></tr>
+          <tr><td>&gt;Rp200 – Rp5.000</td><td>25%</td><td>15%</td></tr>
+          <tr><td>&gt;Rp5.000</td><td>20%</td><td>15%</td></tr>
+          <tr><td>Papan Pemantauan Khusus</td><td>10%</td><td>10%</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p style="font-size:.85rem;color:var(--tinta-60)">Dasar: Kep-00003/BEI/04-2025, berlaku sejak 8 April 2025. Saham hari pertama pencatatan memakai batas dua kali lipat dari harga penawaran umum. Batas ini sudah beberapa kali berubah sejak 2020 — pelajarannya bukan tanggalnya, melainkan bahwa parameter risiko yang kamu anggap tetap ternyata bisa diubah regulator dalam semalam, biasanya justru saat pasar sedang bergejolak dan kamu paling butuh kepastian. Jangan pernah menyusun rencana yang keselamatannya bergantung pada satu angka aturan bursa.</p>
+      </div>
+      <div class="catatan awas">
+        <h4><svg class="ic"><use href="icons.svg#ic-warn"/></svg> Angka ini sedang berubah, per pertengahan September 2026</h4>
+        <p>Dua perubahan sedang berjalan dengan status berbeda. Pertama, klasifikasi auto reject baru yang menambah kelompok harga Rp1–Rp10 dengan batas nominal Rp1, ditargetkan berlaku 7 September 2026 dan masih tahap uji coba menurut pemberitaan akhir Agustus 2026. Kedua, penurunan batas harga minimum saham dari Rp50 ke Rp1, belum punya tanggal resmi karena BEI menunggu kesiapan seluruh anggota bursa. Belum ada konfirmasi resmi keduanya sudah berjalan — tabel di atas menyajikan aturan yang terakhir dipastikan berlaku. Periksa pengumuman BEI sebelum memakai angka ini untuk keputusan nyata.</p>
+      </div>
+      <div class="teks">
+        <p>Sifatnya asimetris: batas naik lebih longgar daripada batas turun, jadi saham bisa naik 25% sehari tapi cuma turun 15%. Efek sampingnya, saham terkunci ARB berarti antrean jual menumpuk tanpa pembeli, dan kamu tidak bisa keluar hari itu berapa pun kerugianmu. Risiko ini tidak muncul di grafik mana pun.</p>
+        <p><strong>Trading halt</strong> membatasi seluruh bursa saat IHSG turun tajam dalam sehari, beda dari auto reject yang membatasi satu saham saja.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Penurunan IHSG sehari</th><th>Tindakan</th><th>Durasi</th></tr>
+          <tr><td>&gt;8%</td><td>Perdagangan dihentikan sementara</td><td>30 menit</td></tr>
+          <tr><td>berlanjut &gt;15%</td><td>Penghentian kedua</td><td>30 menit</td></tr>
+          <tr><td>berlanjut &gt;20%</td><td>Suspensi perdagangan</td><td>Sampai akhir sesi, bisa lebih lama dengan persetujuan OJK</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Sebelum aturan 8 April 2025, ambang penghentian pertama adalah 5%, dan dengan ambang lama itu trading halt Maret 2025 terpicu. Mekanisme ini melindungi pasar, bukan posisimu: selama halt kamu tidak bisa jual, dan saat dibuka lagi harga bisa langsung jauh lebih rendah daripada saat dihentikan. Satu-satunya perlindungan nyata terhadap hari seperti itu adalah ukuran posisi yang sudah kamu tetapkan sebelum harinya datang (lihat 6.10).</p>
+        <p><strong>Papan pencatatan:</strong> Papan Utama (emiten besar, rekam jejak panjang), Papan Pengembangan (belum memenuhi syarat papan utama), Papan Ekonomi Baru (emiten teknologi bertumbuh tinggi), Papan Akselerasi (emiten kecil-menengah), dan <strong>Papan Pemantauan Khusus</strong> — bukan jenjang tapi penandaan untuk saham dengan harga rata-rata sangat rendah, ekuitas negatif, opini disclaimer auditor, likuiditas sangat tipis, atau status tertentu, diperdagangkan lewat <em>full call auction</em> (lelang berkala, bukan perjodohan berkelanjutan). Bagi pemula, papan ini paling sering menimbulkan kerugian besar: harganya murah sehingga terlihat terjangkau, sementara penyebab murahnya justru yang tidak dibaca.</p>
+      </div>
+    </div>
+
+    <div class="bab" id="aksi">
+      <h3>6.4 Aksi korporasi, jenis order &amp; indeks</h3>
+      <div class="teks"><p>Beberapa peristiwa mengubah hargamu tanpa pasar bergerak sama sekali:</p></div>
+      <div class="gulir">
+        <table>
+          <tr><th>Aksi</th><th>Yang terjadi pada harga</th><th>Yang perlu dicek</th></tr>
+          <tr><td>Dividen tunai</td><td>Harga disesuaikan turun sebesar dividen pada tanggal ex</td><td>Cum date, ex date, recording date, payment date</td></tr>
+          <tr><td>Stock split</td><td>Harga dibagi, jumlah lembar dikali, nilai tak berubah</td><td>Rasio split dan tanggal efektif</td></tr>
+          <tr><td>Reverse split</td><td>Kebalikan split, sering menyertai masalah harga terlalu rendah</td><td>Alasan di balik aksi, bukan rasionya</td></tr>
+          <tr><td>Right issue (HMETD)</td><td>Harga terdilusi, muncul harga teoretis pasca hak (TERP)</td><td>Rasio, harga pelaksanaan, untuk apa dananya</td></tr>
+          <tr><td>Buyback</td><td>Jumlah saham beredar berkurang, EPS naik</td><td>Realisasi, bukan sekadar pengumuman</td></tr>
         </table>
       </div>
       <div class="catatan">
-        <h4><svg class="ic"><use href="icons.svg#ic-info"/></svg> Rasio tanpa konteks menyesatkan</h4>
-        <p>PER 5 bisa berarti murah, bisa juga berarti pasar tahu labanya akan anjlok. PER 40 bisa berarti mahal, bisa juga wajar untuk perusahaan yang tumbuh cepat. Selalu pasangkan angka dengan pertanyaan: kenapa angkanya segitu, dan apakah laba tahun lalu berulang atau kejadian sekali?</p>
+        <h4><svg class="ic"><use href="icons.svg#ic-info"/></svg> Right issue paling sering disalahpahami</h4>
+        <p>Kalau kamu tidak menebus haknya, kepemilikanmu terdilusi dan nilainya berkurang. Pertanyaan yang benar bukan apakah harganya murah setelah dilusi, melainkan apakah dana hasil right issue dipakai untuk sesuatu yang imbal hasilnya melampaui biaya modalnya. Perusahaan yang berulang kali menggalang dana tanpa laba yang mengikuti adalah pola yang layak dicurigai.</p>
       </div>
       <div class="teks">
-        <p>Selain angka, periksa hal yang tidak muncul di rasio: apakah bisnisnya kamu mengerti, siapa pemilik pengendalinya, apakah ada rekam jejak buruk terhadap pemegang saham minoritas, dan apakah labanya didukung arus kas operasi yang nyata.</p>
+        <p>Order <strong>limit</strong> menetapkan harga maksimum (beli) atau minimum (jual), dan ini yang dipakai hampir selalu. Order <strong>market</strong> mengeksekusi pada harga terbaik yang tersedia — pada saham tipis ini berbahaya karena bisa tereksekusi jauh dari harga terakhir. Mengubah harga order yang belum tereksekusi menghilangkan prioritas waktumu dalam antrean (lihat 6.9).</p>
+        <p>Indeks yang perlu dikenal: <strong>IHSG</strong> mencakup seluruh saham tercatat dan jadi wajah pasar; <strong>LQ45</strong> dan <strong>IDX30</strong> berisi saham paling likuid berkapitalisasi besar; <strong>IDX80</strong> dan <strong>KOMPAS100</strong> memperluas cakupan itu; <strong>IDXHIDIV20</strong> menyaring pembagi dividen konsisten. Indeks sektoral IDX-IC berguna untuk melihat apakah pergerakan sebuah saham adalah cerita perusahaannya sendiri atau sekadar mengikuti sektornya — pemisahan ini salah satu kebiasaan analisa yang paling cepat memperbaiki kualitas keputusan.</p>
       </div>
     </div>
 
-    <div class="bab">
-      <h3>6.4 Analisis teknikal: kegunaan dan batasnya</h3>
+    <div class="bab" id="lapkeu">
+      <h3>6.5 Membaca laporan keuangan</h3>
       <div class="teks">
-        <p>Analisis teknikal membaca pola harga dan volume. Konsep dasarnya: level support dan resistance, tren (naik, turun, mendatar), rata-rata bergerak, dan indikator momentum seperti RSI atau MACD.</p>
-        <p>Kegunaan wajarnya adalah menentukan <em>kapan</em> masuk atau keluar dari saham yang sudah kamu pilih secara fundamental, serta menegakkan disiplin lewat batas rugi. Yang tidak wajar adalah mengharapkannya memprediksi masa depan. Semakin pendek jangka waktunya, semakin dominan biaya transaksi dan kebisingan pasar.</p>
+        <p>Laporan keuangan bukan tiga dokumen terpisah, melainkan tiga sudut pandang atas peristiwa yang sama — dan justru selisih antar sudut pandang itu yang informatif.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Laporan</th><th>Menjawab pertanyaan</th><th>Sifatnya</th></tr>
+          <tr><td>Neraca</td><td>Apa yang dimiliki dan siapa yang berhak</td><td>Foto pada satu tanggal</td></tr>
+          <tr><td>Laba rugi</td><td>Berapa laba yang diakui selama periode</td><td>Berbasis akrual</td></tr>
+          <tr><td>Arus kas</td><td>Berapa uang tunai yang benar-benar bergerak</td><td>Berbasis kas</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Ada laporan keempat yang paling sering dilewati dan paling banyak isinya: <strong>CALK</strong> (Catatan atas Laporan Keuangan), memuat rincian utang dan jatuh temponya, transaksi pihak berelasi, perkara hukum, dan kebijakan akuntansi. Aturan penyusunannya mengikuti <strong>PSAK</strong> (Pernyataan Standar Akuntansi Keuangan).</p>
       </div>
       <div class="catatan rumus">
-        <h4><svg class="ic"><use href="icons.svg#ic-sigma"/></svg> Aturan ukuran posisi</h4>
-        <p style="margin-bottom:0"><code>Jumlah lot = (modal × risiko per transaksi) ÷ (harga beli − batas rugi) ÷ 100</code><br>Dengan risiko per transaksi 1–2%, satu kesalahan tidak akan menghancurkan portofoliomu. Ini pelajaran yang lebih menentukan daripada indikator apa pun.</p>
+        <h4><svg class="ic"><use href="icons.svg#ic-sigma"/></svg> Identitas yang harus selalu nyambung</h4>
+        <p style="margin-bottom:0"><code>Aset = Liabilitas + Ekuitas</code><br><code>Ekuitas akhir = Ekuitas awal + Laba bersih − Dividen + Setoran modal</code><br><code>Kas akhir = Kas awal + Arus kas operasi + investasi + pendanaan</code><br>Laba bersih dari laba rugi masuk ke ekuitas di neraca, kas dari arus kas masuk ke aset di neraca. Kalau tidak nyambung, ada yang salah pada pembacaanmu atau pada laporannya.</p>
+      </div>
+      <div class="teks">
+        <p>Membaca laba rugi dari atas ke bawah: <strong>pendapatan</strong> (ukuran bisnis), dikurangi <strong>HPP/COGS</strong> jadi laba kotor (mencerminkan daya tawar ke pemasok dan pelanggan), dikurangi beban usaha jadi <strong>laba usaha</strong> (angka paling layak dibandingkan antar tahun), ditambah pendapatan/beban lain (sering tempat laba tidak berulang: selisih kurs, jual aset), jadi laba bersih (paling banyak dikutip, paling mudah dipermak), lalu dibagi jumlah saham jadi laba per saham.</p>
+      </div>
+      <div class="catatan">
+        <h4><svg class="ic"><use href="icons.svg#ic-info"/></svg> Kebiasaan yang membedakan</h4>
+        <p>Selalu bandingkan pertumbuhan laba usaha dengan laba bersih. Kalau laba bersih melonjak sementara laba usaha datar, kenaikannya datang dari luar bisnis inti, dan itu tidak akan berulang tahun depan.</p>
+      </div>
+      <div class="teks">
+        <p>Neraca: sisi aset menjawab uang diparkir di mana, sisi liabilitas &amp; ekuitas menjawab uang berasal dari siapa. Periksa komposisi aset lancar terhadap liabilitas jangka pendek, besar utang berbunga dibanding ekuitas, jadwal jatuh tempo utang, dan porsi aset tak berwujud (goodwill) yang bisa dihapusbukukan sewaktu-waktu.</p>
+        <p>Arus kas dibagi tiga: <strong>operasi</strong> (kegiatan sehari-hari), <strong>investasi</strong> (belanja modal, jual-beli aset), <strong>pendanaan</strong> (utang, setoran modal, dividen). Pola gabungannya bercerita banyak:</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Operasi</th><th>Investasi</th><th>Pendanaan</th><th>Tafsiran umum</th></tr>
+          <tr><td>positif</td><td>negatif</td><td>negatif</td><td>Bisnis mapan, mendanai ekspansi sendiri &amp; mengembalikan uang ke pemodal</td></tr>
+          <tr><td>positif</td><td>negatif</td><td>positif</td><td>Sedang tumbuh, menambah pendanaan luar — cek apakah imbal hasil investasinya melampaui biaya dananya</td></tr>
+          <tr><td>negatif</td><td>negatif</td><td>positif</td><td>Membakar kas, hidup dari pendanaan — wajar untuk tahap awal, berbahaya untuk perusahaan mapan</td></tr>
+          <tr><td>positif</td><td>positif</td><td>negatif</td><td>Menjual aset untuk bayar utang — perlu tahu aset apa yang dijual</td></tr>
+        </table>
+      </div>
+      <div class="catatan">
+        <h4><svg class="ic"><use href="icons.svg#ic-doc"/></svg> Sumber data primer</h4>
+        <p>Laporan keuangan, laporan tahunan, prospektus, dan keterbukaan informasi tersedia gratis di situs BEI pada halaman profil tiap emiten, serta di situs perusahaannya. Baca dokumen aslinya minimal sekali untuk emiten yang benar-benar kamu pegang — ringkasan pihak ketiga berguna untuk menyaring, tidak cukup untuk memutuskan.</p>
       </div>
     </div>
 
-    <div class="bab">
-      <h3>6.5 Diversifikasi dan porsi</h3>
+    <div class="bab" id="rasio">
+      <h3>6.6 Rasio valuasi, profitabilitas &amp; tanda bahaya</h3>
+      <div class="gulir">
+        <table>
+          <tr><th>Rasio</th><th>Rumus</th><th>Yang diukur &amp; jebakannya</th></tr>
+          <tr><td>PER</td><td>Harga ÷ EPS</td><td>Berapa tahun laba untuk balik modal. Rendah bukan berarti murah kalau labanya sedang di puncak siklus.</td></tr>
+          <tr><td>PBV</td><td>Harga ÷ BVPS</td><td>Harga terhadap ekuitas. Hanya bermakna kalau nilai bukunya mencerminkan aset nyata.</td></tr>
+          <tr><td>EPS</td><td>Laba bersih ÷ jumlah saham beredar</td><td>Perhatikan penyebutnya — laba naik tapi saham bertambah bisa membuat EPS justru turun.</td></tr>
+          <tr><td>BVPS</td><td>Ekuitas ÷ jumlah saham beredar</td><td>Turun drastis bila ada penghapusan goodwill atau rugi besar.</td></tr>
+          <tr><td>ROE</td><td>Laba bersih ÷ ekuitas</td><td>Efisiensi modal pemilik. Bisa dinaikkan hanya dengan menambah utang — selalu baca bersama DER.</td></tr>
+          <tr><td>ROA</td><td>Laba bersih ÷ total aset</td><td>Efisiensi seluruh aset, tidak bisa dipoles utang.</td></tr>
+          <tr><td>DER</td><td>Total liabilitas ÷ ekuitas</td><td>Struktur modal. Untuk analisa serius, pakai utang berbunga saja, bukan seluruh liabilitas.</td></tr>
+          <tr><td>ICR</td><td>Laba usaha ÷ beban bunga</td><td>Kemampuan bayar bunga. Di bawah 2 kali itu lampu kuning.</td></tr>
+          <tr><td>GPM &amp; NPM</td><td>Laba kotor/bersih ÷ pendapatan</td><td>Daya tawar &amp; efisiensi. Arah perubahannya lebih penting daripada levelnya.</td></tr>
+          <tr><td>CFO ÷ laba</td><td>Arus kas operasi ÷ laba bersih</td><td>Di bawah 1 secara konsisten berarti laba diakui tapi uangnya belum masuk.</td></tr>
+          <tr><td>EV/EBITDA</td><td>(Kapitalisasi pasar + utang bersih) ÷ EBITDA</td><td>Berguna membandingkan perusahaan dengan struktur utang berbeda.</td></tr>
+        </table>
+      </div>
+      <div class="catatan rumus">
+        <h4><svg class="ic"><use href="icons.svg#ic-sigma"/></svg> Dekomposisi DuPont</h4>
+        <p style="margin-bottom:0"><code>ROE = (Laba bersih ÷ Pendapatan) × (Pendapatan ÷ Aset) × (Aset ÷ Ekuitas)</code><br><code>&nbsp;&nbsp;&nbsp;= marjin bersih × perputaran aset × pengungkit keuangan</code><br>ROE 20% dari marjin tebal beda sifatnya dari ROE 20% dari pengungkit 4×. Yang pertama bertahan selama keunggulan produknya bertahan; yang kedua runtuh saat suku bunga naik.</p>
+      </div>
       <div class="teks">
-        <p>Diversifikasi berarti menyebar risiko yang tidak dibayar pasar: risiko spesifik satu perusahaan. Memiliki 10 saham perbankan bukan diversifikasi, karena mereka jatuh bersamaan.</p>
-        <p>Sebar berdasarkan sektor, dan pertimbangkan proporsi antar kelas aset. Contoh alokasi sederhana berdasarkan jangka waktu tujuan:</p>
+        <p>Metrik yang menentukan juga berbeda per sektor, dan inilah sebab PER 12 di perbankan tidak sama artinya dengan PER 12 di pertambangan: bank dinilai lewat NIM, CASA, LDR, NPL, BOPO, dan CAR — DER tidak bermakna di sini karena simpanan nasabah tercatat sebagai liabilitas. Pertambangan dinilai lewat volume produksi, ASP, <em>cash cost</em>, dan <em>stripping ratio</em> — PER rendah di puncak siklus komoditas justru sinyal risiko. Properti dinilai lewat <em>marketing sales</em>, cadangan lahan, dan RNAV. Konsumer dinilai lewat pertumbuhan volume dan GPM. Telekomunikasi &amp; menara dinilai lewat ARPU dan EBITDA karena laba bersihnya tertekan penyusutan besar. Bandingkan sebuah emiten dengan sejarahnya sendiri dan pesaing sesektor, bukan rata-rata pasar.</p>
+        <p><strong>Tanda bahaya yang bisa dicek dalam sepuluh menit:</strong></p>
+        <ul>
+          <li>Piutang usaha tumbuh jauh lebih cepat daripada pendapatan beberapa kuartal berturut-turut.</li>
+          <li>Persediaan menumpuk sementara penjualan datar.</li>
+          <li>Arus kas operasi negatif padahal laba bersih positif, berulang lebih dari dua tahun.</li>
+          <li>Laba bersih ditopang selisih kurs, revaluasi aset, atau penjualan anak usaha.</li>
+          <li>Utang jangka pendek jauh lebih besar daripada kas, tanpa fasilitas siaga.</li>
+          <li>Transaksi berulang dengan pihak berelasi dalam nilai material.</li>
+          <li>Pergantian auditor atau opini selain wajar tanpa pengecualian.</li>
+          <li>Right issue berulang tanpa perbaikan laba usaha.</li>
+          <li>Jumlah saham beredar terus bertambah, sehingga laba tumbuh tapi laba per saham tidak.</li>
+        </ul>
+      </div>
+
+      <div class="kasus">
+        <div class="kasus-kepala">
+          <div><span class="label">Studi kasus · Kualitas laba</span><h4>GIAA: laba yang tidak diikuti kas</h4></div>
+          <span class="waktu">Laporan tahun buku 2018, sanksi Juni 2019</span>
+        </div>
+        <div class="kasus-fakta">
+          <div><span>Laba versi awal</span><b class="naik">US$5 jt</b></div>
+          <div><span>Setelah restatement</span><b class="turun">rugi US$175 jt</b></div>
+          <div><span>Koreksi pendapatan lain</span><b class="turun">US$239 jt</b></div>
+          <div><span>Ekuitas turun</span><b class="turun">US$180 jt</b></div>
+        </div>
+        <div class="kasus-isi">
+          <p>PT Garuda Indonesia (Persero) Tbk menerbitkan laporan 2018 dengan laba bersih sekitar US$5 juta, membalik rugi besar tahun sebelumnya. Sumber pembalikannya satu pos: piutang dari kontrak konektivitas dengan PT Mahata Aero Technology, kontrak jangka panjang yang diakui seluruhnya sebagai pendapatan tahun itu juga, padahal uangnya belum diterima. Dua komisaris menolak menandatangani laporan tersebut. Kemenkeu, OJK, dan BEI lalu menjatuhkan sanksi dan mewajibkan penyajian ulang; hasil restatement 26 Juli 2019 mengubah laba US$5 juta menjadi rugi US$175 juta.</p>
+          <div class="kasus-pelajaran">
+            <span class="label">Yang bisa ditarik untuk analisamu sendiri</span>
+            <ul>
+              <li>Bandingkan pertumbuhan laba usaha dengan laba bersih — di kasus ini seluruh laba datang dari pos pendapatan lain-lain, bukan dari mengangkut penumpang.</li>
+              <li>Periksa arus kas operasi. Pendapatan diakui tanpa kas masuk selalu meninggalkan jejak lonjakan piutang dan CFO yang tidak mengikuti laba.</li>
+              <li>Baca CALK bagian pihak berelasi dan kontrak material — satu kontrak yang mampu membalik hasil setahun adalah anomali, bukan kabar baik.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="kasus-sumber">Peristiwa ini sudah selesai dan tidak menggambarkan kondisi emiten saat ini. Disajikan sebagai bahan latihan membaca laporan keuangan. Sumber: CNBC Indonesia (26 &amp; 29 Juni 2019).</div>
+      </div>
+
+      <div class="kasus">
+        <div class="kasus-kepala">
+          <div><span class="label">Studi kasus · Tanda bahaya neraca</span><h4>AISA: piutang, persediaan &amp; aset tetap yang digelembungkan</h4></div>
+          <span class="waktu">Laporan tahun buku 2017, investigasi terbit Maret 2019</span>
+        </div>
+        <div class="kasus-fakta">
+          <div><span>Dugaan overstatement</span><b class="turun">Rp4 triliun</b></div>
+          <div><span>Penjualan digelembungkan</span><b class="turun">Rp662 miliar</b></div>
+          <div><span>EBITDA digelembungkan</span><b class="turun">Rp329 miliar</b></div>
+          <div><span>Dana ke pihak terafiliasi</span><b class="turun">Rp1,78 triliun</b></div>
+        </div>
+        <div class="kasus-isi">
+          <p>Setelah RUPS luar biasa Oktober 2018 mengganti manajemen lama, manajemen baru PT Tiga Pilar Sejahtera Food Tbk menugaskan Ernst &amp; Young melakukan investigasi. Laporannya menemukan dugaan penggelembungan sekitar Rp4 triliun pada piutang, persediaan, dan aset tetap 2017 — tiga pos yang paling mudah dimanipulasi karena diukur dengan estimasi, dan sama-sama membesarkan laba tanpa satu rupiah pun kas masuk.</p>
+          <div class="kasus-pelajaran">
+            <span class="label">Yang bisa ditarik untuk analisamu sendiri</span>
+            <ul>
+              <li>Hitung hari piutang dan hari persediaan, bandingkan lintas tahun dan dengan pesaing. Kenaikan tak terjelaskan pertumbuhan penjualan adalah pintu masuk pemeriksaan.</li>
+              <li>Curigai transaksi berulang dengan pihak berelasi bernilai material — satu-satunya bagian CALK yang wajib dibaca meski melewati bagian lain.</li>
+              <li>Laporan yang sudah diaudit bukan jaminan. Opini wajar tanpa pengecualian menyatakan penyajian sesuai standar, bukan bahwa angkanya pasti benar.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="kasus-sumber">Peristiwa ini sudah selesai dan tidak menggambarkan kondisi emiten saat ini. Sumber: Kontan &amp; CNBC Indonesia (Maret 2019), laporan investigasi di situs BEI.</div>
+      </div>
+    </div>
+
+    <div class="bab" id="valuasi">
+      <h3>6.7 Valuasi lanjutan &amp; menghindari jebakan nilai</h3>
+      <div class="teks">
+        <p><em>Value investing</em> berdiri di atas klaim sederhana tapi sulit dijalankan: harga pasar dan nilai perusahaan adalah dua hal berbeda, keduanya bertemu pada akhirnya, dan selisihnya bisa dieksploitasi kalau kamu bersedia menunggu. <strong>Margin of safety</strong> adalah jarak antara harga beli dan perkiraan nilai intrinsik, fungsinya melindungi dari kesalahan estimasimu sendiri, bukan menambah untung.</p>
+        <p><strong>Valuasi relatif</strong> paling cepat dipakai: nilai wajar = kelipatan pembanding × metrik per saham. Yang menentukan kualitasnya adalah pemilihan pembanding — sektor sama, ukuran sebanding, struktur modal mirip, fase siklus sama. Bandingkan PER dengan pertumbuhan lewat <strong>PEG</strong> (PER ÷ laju pertumbuhan laba), dan PBV dengan ROE — identitasnya <code>PBV = PER × ROE</code>, jadi dua emiten sesektor dengan PBV sama tapi ROE beda jauh, yang ROE-nya tinggi lebih murah.</p>
+        <p><strong>DDM</strong> (<em>Dividend Discount Model</em>) cocok untuk perusahaan mapan berdividen teratur: <code>P = D1 ÷ (r − g)</code>. Model ini sangat peka terhadap selisih r dan g — menaikkan g satu poin persentase saja bisa mengubah nilai wajar sepertiga, jadi g harus konservatif.</p>
+        <p><strong>DCF</strong> (<em>Discounted Cash Flow</em>) memproyeksikan arus kas bebas 5–10 tahun, mendiskontokannya dengan <strong>WACC</strong>, menghitung nilai terminal, lalu mengurangi utang bersih dan membaginya dengan jumlah saham.</p>
+      </div>
+      <div class="catatan awas">
+        <h4><svg class="ic"><use href="icons.svg#ic-warn"/></svg> Peringatan yang menentukan pada DCF</h4>
+        <p>Pada DCF tipikal, 60–80% nilainya berasal dari nilai terminal — bagian yang asumsinya paling lemah. Jangan pernah menyajikan hasil DCF sebagai satu angka; sajikan sebagai tabel sensitivitas terhadap WACC dan g. Kalau nilai wajar hanya masuk akal pada sudut paling optimistis, tesismu sedang bergantung pada asumsi, bukan pada perusahaan.</p>
+      </div>
+      <div class="teks">
+        <p>Saham murah yang terus murah disebut <strong>value trap</strong>. Cirinya: murah karena laba sedang di puncak siklus yang sedang berbalik, industri menyusut struktural, nilai buku besar tapi asetnya tak bisa dijual senilai bukunya, pengendali punya rekam jejak tidak berpihak ke minoritas, atau murah karena pasar tahu sesuatu yang belum kamu baca. Pertanyaan penyaring paling berguna: apa yang harus terjadi agar harga bertemu nilai, dan siapa yang akan menyadarinya. Tanpa jawaban dua pertanyaan itu, kamu memegang harapan, bukan tesis.</p>
+      </div>
+
+      <div class="kasus">
+        <div class="kasus-kepala">
+          <div><span class="label">Studi kasus · Jebakan nilai</span><h4>UNVR: perusahaan bagus yang terus murah selama tujuh tahun</h4></div>
+          <span class="waktu">Januari 2018 – awal 2025</span>
+        </div>
+        <div class="kasus-fakta">
+          <div><span>Pendapatan 9B 2024</span><b class="turun">turun 10,12%</b></div>
+          <div><span>Laba bersih 9B 2024</span><b class="turun">turun 28,15%</b></div>
+          <div><span>Harga 7 Feb 2025</span><b>Rp1.425</b></div>
+          <div><span>Level ini terakhir</span><b>pertengahan 2008</b></div>
+        </div>
+        <div class="kasus-isi">
+          <p>PT Unilever Indonesia Tbk lama jadi contoh perusahaan berkualitas: merek kuat, ROE sangat tinggi, arus kas tebal. Sahamnya naik sekitar 285% sepanjang 2011–2018, lalu sejak Januari 2018 harganya menurun bertahun-tahun sampai 7 Februari 2025 menyentuh Rp1.425, level yang terakhir disentuh pertengahan 2008. Sepanjang penurunan itu sahamnya terus terlihat murah dibanding sejarahnya sendiri — yang berubah bukan valuasinya, melainkan bisnisnya: marjin bersih menyusut dari sekitar 18% (2012) jadi 13% (2022), beban royalti lisensi global naik lebih dari dua kali lipat, dan segmen es krim kehilangan pangsa pasar dari 69,2% ke 61,9% sambil marjinnya turun.</p>
+          <div class="kasus-pelajaran">
+            <span class="label">Yang bisa ditarik untuk analisamu sendiri</span>
+            <ul>
+              <li>Murah dibanding sejarah sendiri bukan tesis — pertanyaannya selalu mengapa murah, dan apakah sebabnya sementara atau permanen.</li>
+              <li>Pisahkan penurunan siklikal dari penurunan struktural. Kenaikan royalti dan hilangnya pangsa pasar tidak berbalik hanya karena ekonomi membaik.</li>
+              <li>Ikuti marjin, bukan hanya laba — penyusutan perlahan selama sepuluh tahun tak terlihat pada satu laporan kuartalan.</li>
+              <li>Biaya kesempatan itu kerugian nyata. Memegang saham diam tujuh tahun berarti kehilangan apa pun yang bisa dihasilkan modal itu di tempat lain.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="kasus-sumber">Rentang peristiwa berakhir awal 2025 dan tidak menggambarkan kondisi emiten saat ini. Disajikan sebagai bahan latihan analisa valuasi. Sumber: Bisnis.com &amp; Mikir Duit (Februari 2025).</div>
+      </div>
+    </div>
+
+    <div class="bab" id="teknikal">
+      <h3>6.8 Analisis teknikal, candlestick &amp; indikator</h3>
+      <div class="teks">
+        <p>Analisis teknikal berdiri di atas tiga premis Dow — asumsi, bukan hukum alam: harga sudah mencerminkan seluruh informasi yang tersedia, harga bergerak dalam tren, dan pola perilaku pelaku pasar berulang karena manusia berulang. Kenyataannya ketiganya benar sebagian, dan itu sebabnya pelaku pasar matang memakai fundamental untuk menjawab <em>apa</em> yang layak dibeli, teknikal untuk menjawab <em>kapan</em> dan di harga berapa.</p>
+        <p>Tren didefinisikan oleh struktur, bukan perasaan: <strong>uptrend</strong> adalah puncak dan lembah yang sama-sama makin tinggi, <strong>downtrend</strong> sama-sama makin rendah, <strong>sideways</strong> bergerak dalam rentang mendatar. Perubahan struktur terjadi bukan saat harga turun banyak, melainkan saat lembah terakhir ditembus. Koreksi 10% setelah kenaikan 50% bukan downtrend selama lembah sebelumnya belum ditembus — menyebut koreksi sebagai pembalikan arah adalah penyebab paling umum keluar terlalu awal dari posisi yang benar.</p>
+        <p><strong>Support</strong> dan <strong>resistance</strong> adalah area, bukan garis setebal satu rupiah, kekuatannya dari jumlah transaksi yang pernah terjadi di sana. Resistance yang ditembus cenderung jadi support, dan sebaliknya, karena mereka yang menjual di level itu ingin membeli kembali saat harga menyentuhnya lagi.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Kondisi volume</th><th>Tafsiran</th></tr>
+          <tr><td>Harga naik, volume naik</td><td>Kenaikan didukung partisipasi — konfirmasi paling sehat</td></tr>
+          <tr><td>Harga naik, volume turun</td><td>Minat menipis — kenaikan rentan berbalik</td></tr>
+          <tr><td>Harga turun, volume naik</td><td>Tekanan jual nyata, bukan sekadar sepi pembeli</td></tr>
+          <tr><td>Volume meledak sehari ekstrem</td><td>Bisa berarti klimaks, akhir gerakan, bukan awalnya</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Aturan tunggal paling berguna: penembusan resistance tanpa kenaikan volume adalah kandidat penembusan palsu. Pola grafik seperti <em>double top/bottom</em>, <em>head and shoulders</em>, segitiga, dan <em>cup and handle</em> punya sasaran terukur dari tinggi polanya — bermanfaat bukan untuk memprediksi harga, melainkan menilai apakah rasio imbal hasil terhadap risiko masuk akal sebelum eksekusi. Urutan konfirmasi lintas timeframe dari besar ke kecil: mingguan menentukan arah dominan, harian menentukan setup, intraday menentukan titik masuk. Timeframe lebih besar selalu menang.</p>
+        <p><strong>Candlestick</strong> merangkum empat angka per periode: buka, tertinggi, terendah, tutup. Badan (jarak buka–tutup) menunjukkan siapa menang di akhir periode; sumbu (jarak ke ekstrem) menunjukkan seberapa jauh pihak kalah sempat mendorong harga sebelum dipatahkan. Sumbu bawah panjang di dasar penurunan berarti permintaan muncul di harga rendah (mirip pola <em>hammer</em>); sumbu atas panjang di puncak kenaikan berarti penawaran menolak kenaikan (mirip <em>shooting star</em>).</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Pola</th><th>Sinyal</th><th>Cara baca</th></tr>
+          <tr><td>Hammer / dragonfly doji</td><td>Bullish di dasar tren</td><td>Sumbu bawah panjang, harga ditekan lalu dibeli kembali</td></tr>
+          <tr><td>Shooting star</td><td>Bearish di puncak tren</td><td>Sumbu atas panjang, kenaikan ditolak</td></tr>
+          <tr><td>Bullish / bearish engulfing</td><td>Pembalikan dua batang</td><td>Badan baru menelan penuh badan sebelumnya</td></tr>
+          <tr><td>Morning star / evening star</td><td>Pembalikan tiga batang, lebih andal</td><td>Batang besar, jeda kecil, batang besar berlawanan arah</td></tr>
+          <tr><td>Three white soldiers / black crows</td><td>Lanjutan tren kuat</td><td>Tiga batang beruntun searah dengan sumbu pendek</td></tr>
+          <tr><td>Doji / spinning top</td><td>Netral</td><td>Badan kecil — keraguan, arah ditentukan batang berikutnya</td></tr>
+        </table>
+      </div>
+      <div class="catatan">
+        <h4><svg class="ic"><use href="icons.svg#ic-info"/></svg> Prinsip yang membuat pola candle bekerja</h4>
+        <p>Pola candle tidak punya arti tetap. Hammer di dasar penurunan panjang setelah support teruji adalah informasi; hammer yang sama di tengah rentang mendatar adalah kebisingan. Urutan membaca yang benar: struktur dulu, lokasi kedua, pola terakhir. Pola satu batang jauh lebih lemah daripada tiga batang, dan konfirmasi butuh batang berikutnya tertutup.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Indikator</th><th>Mengukur</th><th>Kondisi ia gagal</th></tr>
+          <tr><td>MA &amp; EMA</td><td>Arah rata-rata</td><td>Pasar mendatar — persilangan berulang dan salah tiap kali</td></tr>
+          <tr><td>RSI (14)</td><td>Kekuatan relatif naik/turun</td><td>Pada tren kuat bertahan &gt;70 berminggu-minggu — jual karena "overbought" kesalahan klasik</td></tr>
+          <tr><td>MACD</td><td>Momentum tren</td><td>Sangat lambat pada pembalikan tajam</td></tr>
+          <tr><td>Bollinger Bands</td><td>Volatilitas sekitar rata-rata</td><td>Pada tren kuat harga berjalan menempel pita atas — bukan sinyal jual</td></tr>
+          <tr><td>ATR</td><td>Rentang gerak rata-rata</td><td>Bukan indikator arah — memakainya untuk arah salah kaprah</td></tr>
+          <tr><td>VWAP</td><td>Harga rata-rata tertimbang volume harian</td><td>Kehilangan makna di luar hari berjalan</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Setiap indikator adalah transformasi matematis atas harga dan volume yang sudah kamu punya — tidak ada yang menambah informasi baru, dan semuanya tertinggal dari harga karena dihitung darinya. Menumpuk banyak indikator dari keluarga sama (RSI, MACD, Stochastic semuanya momentum) tidak menambah bukti, hanya menambah rasa yakin. Untuk sebagian besar orang, satu penunjuk arah + satu penunjuk tenaga + volume sudah cukup; keputusan tetap diambil dari struktur harga, indikator hanya menyaring.</p>
+      </div>
+      <div class="catatan awas">
+        <h4><svg class="ic"><use href="icons.svg#ic-warn"/></svg> Jebakan optimasi</h4>
+        <p>Mengubah-ubah parameter indikator sampai hasilnya bagus pada data masa lalu hampir selalu menghasilkan angka yang gagal ke depan. Kalau sebuah sistem hanya bekerja pada RSI periode 13 dan hancur pada periode 12 atau 14, sistem itu tidak menemukan apa-apa.</p>
+      </div>
+    </div>
+
+    <div class="bab" id="orderbook">
+      <h3>6.9 Orderbook, bid/offer &amp; aliran dana</h3>
+      <div class="teks">
+        <p>Sistem BEI menjodohkan order dengan <strong>prioritas harga lalu waktu</strong>: order beli harga tertinggi dilayani lebih dulu, kalau sama, yang lebih dulu masuk antrean yang dilayani lebih dulu. Konsekuensinya, mengubah harga order membuatmu kehilangan posisi antrean dan kembali ke belakang.</p>
+        <p>Sisi <strong>bid</strong> adalah antrean pembeli, sisi <strong>offer/ask</strong> antrean penjual. Selisih bid tertinggi dan offer terendah disebut <strong>spread</strong> — ukuran likuiditas yang lebih jujur daripada volume harian. <strong>Kedalaman</strong> (berapa lot tersedia dalam beberapa tick) menentukan seberapa besar posisi yang bisa kamu keluarkan tanpa menggerakkan harga sendiri.</p>
+      </div>
+      <div class="dua-kolom">
+        <div>
+          <span class="judul no">Tafsiran yang rapuh</span>
+          <ul>
+            <li>Bid tebal berarti akan naik.</li>
+            <li>Antrean besar di satu harga berarti ada pihak besar yang serius.</li>
+          </ul>
+        </div>
+        <div>
+          <span class="judul ok">Sebab tafsiran itu rapuh</span>
+          <ul>
+            <li>Order dapat ditarik kapan saja tanpa biaya, dan sering ditarik saat harga mendekat.</li>
+            <li>Yang benar-benar terjadi tercatat di <em>running trade</em>, bukan di antrean — antrean adalah niat, transaksi adalah fakta.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="teks">
+        <p><strong>Running trade</strong> mencatat transaksi yang benar-benar terjadi. Yang dibaca: siapa agresif (transaksi di harga offer berarti pembeli mengambil, di harga bid berarti penjual melepas), ukuran transaksi, dan penyerapan (harga tak turun meski jual beruntun masuk, berarti ada permintaan menyerap). Tape reading menuntut kehadiran di depan layar sepanjang jam bursa — kalau kamu bekerja atau kuliah jam 09.00–15.49, metode ini secara realistis tidak tersedia, dan itu soal ketersediaan data, bukan disiplin.</p>
+        <p><strong>Broker summary</strong> meringkas berapa lot dibeli/dijual lewat tiap kode broker beserta harga rata-ratanya. <strong>Net asing</strong> adalah selisih beli-jual lewat broker yang diklasifikasikan asing.</p>
+      </div>
+      <div class="catatan awas">
+        <h4><svg class="ic"><use href="icons.svg#ic-warn"/></svg> Kesimpulan yang tidak sah ditarik dari broker summary</h4>
+        <ul style="margin-bottom:0">
+          <li><strong>Satu kode broker bukan satu pihak</strong> — mewakili seluruh nasabahnya, bisa ribuan orang dengan niat berlawanan.</li>
+          <li><strong>Asing bukan berarti pintar</strong> — klasifikasi administratif, bukan penilaian kualitas. Dana asing bisa keluar karena rebalancing indeks global, tidak ada hubungannya dengan emiten.</li>
+          <li><strong>Transaksi tutup sendiri</strong> (crossing) mendistorsi volume tanpa perpindahan kepemilikan ekonomis.</li>
+          <li><strong>Data ini historis</strong> — tersedia setelah sesi berakhir, jadi menyimpulkan arah hari ini dari data kemarin berisiko keliru.</li>
+        </ul>
+      </div>
+      <div class="teks">
+        <p>Kerangka <strong>bandarmology</strong> menggambarkan tiga fase: <strong>akumulasi</strong> (mengumpulkan perlahan di rentang sempit), <strong>markup</strong> (harga digerakkan naik, perhatian publik datang), dan <strong>distribusi</strong> (kepemilikan dilepas ke peserta baru). Yang perlu jujur dinyatakan: ketiga fase itu hanya bisa dipastikan setelah selesai — pada saat kejadian, akumulasi dan sekadar sepi terlihat identik. Perlakukan pembacaan aliran dana sebagai satu masukan yang memperkuat atau melemahkan tesis dari struktur harga, bukan tesis yang berdiri sendiri.</p>
+      </div>
+
+      <div class="kasus">
+        <div class="kasus-kepala">
+          <div><span class="label">Studi kasus · Free float &amp; arus dana pasif</span><h4>BREN: ketika penjual terbesar bukan bandar, melainkan indeks</h4></div>
+          <span class="waktu">19–25 September 2024</span>
+        </div>
+        <div class="kasus-fakta">
+          <div><span>Free float</span><b>11,66%</b></div>
+          <div><span>Dikuasai 4 pemegang</span><b class="turun">95,97%</b></div>
+          <div><span>Harga 19 Sep 2024</span><b class="turun">turun 19,95%</b></div>
+          <div><span>Batas ARB saat itu</span><b>20%</b></div>
+        </div>
+        <div class="kasus-isi">
+          <p>PT Barito Renewables Energy Tbk masuk indeks FTSE Global Equity Juni 2024. Pada 19 September 2024, FTSE Russell mengumumkan mengeluarkannya karena konsentrasi kepemilikan terlalu tinggi (empat pemegang saham menguasai 95,97%), bukan karena free float di bawah ambang. Harganya jatuh 19,95% pada hari pengumuman — berhenti persis di batas ARB saat itu (20%), artinya bukan tekanan jual mereda melainkan sistem menolak order lebih rendah. Tekanan jual di sini berasal dari dana indeks pasif yang wajib menjual karena aturan indeksnya, tanpa penilaian apa pun atas prospek emiten.</p>
+          <div class="kasus-pelajaran">
+            <span class="label">Yang bisa ditarik untuk analisamu sendiri</span>
+            <ul>
+              <li>Periksa free float dan konsentrasi kepemilikan sebelum menilai likuiditas — kapitalisasi besar dengan free float tipis berarti harga mudah bergerak jauh dengan uang relatif kecil.</li>
+              <li>Net sell asing punya banyak sebab, dan rebalancing indeks salah satu yang paling sering.</li>
+              <li>Gerakan yang berhenti persis di batas ARA/ARB bukan keseimbangan pasar, melainkan antrean yang tertahan sistem.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="kasus-sumber">Peristiwa ini sudah selesai dan tidak menggambarkan kondisi emiten atau keanggotaan indeksnya saat ini. Sumber: Bisnis.com &amp; Antara (September 2024).</div>
+      </div>
+    </div>
+
+    <div class="bab" id="risiko-bab">
+      <h3>6.10 Manajemen risiko &amp; ukuran posisi</h3>
+      <div class="teks">
+        <p>Dua orang dengan sinyal yang sama persis bisa berakhir dengan hasil berlawanan, dan yang membedakan adalah ukuran posisi dan titik keluar. Aritmatikanya tidak simetris:</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Kerugian</th><th>Kenaikan untuk impas</th></tr>
+          <tr><td>10%</td><td>11,1%</td></tr>
+          <tr><td>20%</td><td>25,0%</td></tr>
+          <tr><td>33%</td><td>≈49%</td></tr>
+          <tr><td>50%</td><td>100,0%</td></tr>
+          <tr><td>70%</td><td>≈233%</td></tr>
+        </table>
+      </div>
+      <div class="teks">
+        <p>Melindungi diri dari kerugian besar bernilai lebih daripada menambah akurasi sinyal. Urutannya selalu sama: tentukan titik stop lebih dulu berdasarkan struktur harga, baru hitung ukuran posisi dari jarak stop itu. Membalik urutan — menentukan lot dulu lalu mencari stop yang nyaman — adalah cara paling umum kehilangan modal perlahan.</p>
+      </div>
+      <div class="catatan rumus">
+        <h4><svg class="ic"><use href="icons.svg#ic-sigma"/></svg> Rumus ukuran posisi</h4>
+        <p style="margin-bottom:0"><code>Risiko per transaksi = Modal × persentase risiko (lazimnya 1–2%)</code><br><code>Risiko per lembar = Harga entry − Harga stop</code><br><code>Jumlah lot = Risiko per transaksi ÷ (Risiko per lembar × 100)</code>, dibulatkan ke bawah</p>
+      </div>
+
+      <div class="alat" id="posisi" style="--c:var(--n50)">
+        <div class="alat-judul"><span class="ikon-badge"><svg class="ic"><use href="icons.svg#ic-shield"/></svg></span><h3>Alat hitung: ukuran posisi</h3></div>
+        <p class="alat-ket">Kalau ukuran posisi yang keluar lebih besar daripada yang nyaman kamu pegang, yang salah bukan kalkulatornya, melainkan stop yang terlalu dekat dengan entry.</p>
+        <div class="alat-grid">
+          <div>
+            <div class="isian">
+              <label for="ps-modal">Modal <span class="satuan">(Rp)</span></label>
+              <input type="text" id="ps-modal" inputmode="numeric" value="50.000.000">
+            </div>
+            <div class="isian">
+              <label for="ps-risiko">Risiko per transaksi <span class="nilai-range" id="ps-risiko-v">1%</span></label>
+              <input type="range" id="ps-risiko" min="0.1" max="5" step="0.1" value="1">
+            </div>
+            <div class="isian">
+              <label for="ps-entry">Harga entry <span class="satuan">(Rp)</span></label>
+              <input type="text" id="ps-entry" inputmode="numeric" value="1.200">
+            </div>
+            <div class="isian">
+              <label for="ps-stop">Harga stop <span class="satuan">(Rp)</span></label>
+              <input type="text" id="ps-stop" inputmode="numeric" value="1.140">
+            </div>
+            <div class="isian">
+              <label for="ps-target">Harga target <span class="satuan">(Rp)</span></label>
+              <input type="text" id="ps-target" inputmode="numeric" value="1.380">
+            </div>
+          </div>
+          <div class="hasil">
+            <div class="hasil-label">Ukuran posisi maksimal</div>
+            <div class="hasil-utama" id="ps-lot">83 lot</div>
+            <div style="margin-top:16px">
+              <div class="hasil-baris"><span>Nilai posisi</span><span id="ps-nilai">Rp9.960.000 (20% modal)</span></div>
+              <div class="hasil-baris"><span>Rugi bila stop kena</span><span id="ps-rugi">Rp498.000</span></div>
+              <div class="hasil-baris"><span>Rasio imbal risiko</span><span id="ps-rr">3,00 : 1</span></div>
+            </div>
+            <div class="verdict hati" id="ps-verdict">Rasio di bawah 2:1 sebaiknya dilewati — cari setup dengan target lebih jauh atau stop lebih rapat.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="teks">
+        <p>Stop dipasang di tempat yang membatalkan alasanmu membeli (biasanya sedikit di bawah support terakhir), bukan di tempat yang membuat kerugianmu terasa nyaman, dan hanya boleh digeser ke arah yang mengurangi risiko. Batas tambahan yang berguna: batas kerugian harian (misalnya 3% modal, berhenti tanpa pengecualian bila tersentuh), batas penurunan bulanan (misal 8%, kurangi ukuran posisi separuh bila tersentuh), dan jumlah posisi terbuka (5–8 sudah cukup untuk sebagian besar orang — lima saham di sektor sama bukan diversifikasi, hanya satu taruhan yang dipecah lima).</p>
+        <p><strong>Jurnal</strong> yang berguna mencatat rencana sebelum eksekusi (alasan masuk, entry/stop/target/lot) lalu apa yang benar-benar terjadi. Setelah dua puluh entri, hitung persentase transaksi untung, rata-rata untung, dan rata-rata rugi (dalam satuan <strong>R</strong>, yaitu hasil dibagi risiko awal) — sistem bisa untung dengan tingkat keberhasilan 40% asalkan rata-rata untungnya lebih dari satu setengah kali rata-rata ruginya.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Kekeliruan berpikir</th><th>Bentuknya di layar</th><th>Penawarnya</th></tr>
+          <tr><td>Efek disposisi</td><td>Cepat realisasi untung, menahan rugi terlalu lama</td><td>Stop &amp; target ditulis sebelum entry, lalu dipatuhi</td></tr>
+          <tr><td>Revenge trading</td><td>Segera masuk lagi setelah rugi, ukuran lebih besar</td><td>Batas kerugian harian yang dipatuhi tanpa penilaian saat itu</td></tr>
+          <tr><td>FOMO</td><td>Beli setelah kenaikan tajam karena takut tertinggal</td><td>Daftar pantau dengan level entry ditetapkan sebelum harga bergerak</td></tr>
+          <tr><td>Penjangkaran</td><td>Menolak jual di bawah harga beli sendiri</td><td>Harga belimu tidak diketahui pasar dan tak relevan bagi keputusan berikutnya</td></tr>
+        </table>
+      </div>
+
+      <div class="kasus">
+        <div class="kasus-kepala">
+          <div><span class="label">Studi kasus · Risiko yang tidak muncul di grafik</span><h4>IHSG Maret &amp; April 2025: dua hari ketika pintu keluar tertutup</h4></div>
+          <span class="waktu">18 Maret &amp; 8 April 2025</span>
+        </div>
+        <div class="kasus-fakta">
+          <div><span>18 Maret 2025</span><b class="turun">turun &gt;5%</b></div>
+          <div><span>8 April 2025</span><b class="turun">dibuka turun 9%</b></div>
+          <div><span>Jarak kejadian</span><b>21 hari</b></div>
+          <div><span>Aturan halt berubah</span><b>8 April 2025</b></div>
+        </div>
+        <div class="kasus-isi">
+          <p>Pada 18 Maret 2025 IHSG turun lebih dari 5% dalam satu sesi dan BEI menghentikan perdagangan — penghentian pertama sejak guncangan pandemi 2020. Belum genap sebulan kemudian, 8 April 2025, IHSG dibuka anjlok sekitar 9% menyusul pengumuman tarif Amerika Serikat, dan perdagangan kembali dihentikan. Pada hari yang sama BEI menerbitkan aturan yang mengubah ambang trading halt dari 5% jadi 8% sekaligus menyeragamkan ARB jadi 15% — aturan yang membatasi kerugianmu diubah tepat pada hari terburuk. Selama halt tidak ada order yang bisa dieksekusi, dan stop loss yang tertulis rapi di jurnal tidak menolong bila tidak ada pihak di sisi lain transaksi.</p>
+          <div class="kasus-pelajaran">
+            <span class="label">Yang bisa ditarik untuk analisamu sendiri</span>
+            <ul>
+              <li>Stop loss melindungi dari pergerakan harga yang tertib. Ukuran posisi melindungi dari hari ketika pasar tidak tertib — hanya yang kedua tetap bekerja saat perdagangan dihentikan.</li>
+              <li>Uji rencanamu terhadap skenario <em>gap</em>: harga dibuka jauh di bawah stop. Kerugian nyatamu pada hari seperti itu bukan sebesar jarak ke stop.</li>
+              <li>Konsentrasi sektor terlihat aman sampai guncangan bersifat sistemik — pada hari-hari itu hampir semua saham bergerak searah.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="kasus-sumber">Peristiwa ini sudah selesai dan tidak menggambarkan kondisi pasar saat ini. Sumber: Detik Finance, Bareksa &amp; Tempo (Maret–April 2025).</div>
+      </div>
+    </div>
+
+    <div class="bab" id="jalur">
+      <h3>6.11 Memilih jalur &amp; diversifikasi</h3>
+      <div class="teks">
+        <p>Tiga jalur berikut bukan tingkatan — ketiganya bisa berhasil dan bisa gagal, tergantung kondisi pasar dan keadaanmu sendiri: berapa lama uangmu bisa diam, berapa menit kamu benar-benar bisa memantau pada jam bursa, dan data apa yang bisa kamu akses.</p>
+      </div>
+      <div class="gulir">
+        <table>
+          <tr><th>Faktor</th><th>Jalur Nilai</th><th>Jalur Tren</th><th>Jalur Aliran Dana</th></tr>
+          <tr><td>Horizon</td><td>1–5 tahun</td><td>Beberapa minggu–bulan</td><td>Intraday–beberapa hari</td></tr>
+          <tr><td>Waktu pantau jam bursa</td><td>Hampir tak perlu</td><td>~15 menit sehari</td><td>Terus-menerus</td></tr>
+          <tr><td>Data wajib</td><td>Laporan keuangan</td><td>Grafik harga &amp; volume</td><td>Orderbook, running trade, broker summary</td></tr>
+          <tr><td>Beban biaya transaksi</td><td>Dapat diabaikan</td><td>Kecil</td><td>Besar dan menentukan</td></tr>
+        </table>
+      </div>
+      <div class="dua-kolom">
+        <div>
+          <span class="judul ok">Jalur Nilai bekerja baik ketika</span>
+          <ul><li>Pasar pesimistis dan menurunkan harga tanpa pandang bulu.</li><li>Kamu punya horizon panjang, tak ada tenggat atas dananya.</li></ul>
+        </div>
+        <div>
+          <span class="judul no">Jalur Nilai gagal ketika</span>
+          <ul><li>Murahnya struktural, misalnya industri yang menyusut permanen.</li><li>Tata kelola buruk, nilai tak pernah sampai ke pemegang saham minoritas.</li></ul>
+        </div>
+      </div>
+      <div class="dua-kolom">
+        <div>
+          <span class="judul ok">Jalur Tren bekerja baik ketika</span>
+          <ul><li>Pasar sedang trending, arah bertahan berminggu-minggu.</li><li>Ada level stop yang jelas dalam jarak wajar dari harga sekarang.</li></ul>
+        </div>
+        <div>
+          <span class="judul no">Jalur Tren gagal ketika</span>
+          <ul><li>Pasar bergerak mendatar — setiap penembusan gagal, kerugian kecil menumpuk.</li><li>Kamu mengubah aturan setelah beberapa kerugian beruntun.</li></ul>
+        </div>
+      </div>
+      <div class="dua-kolom">
+        <div>
+          <span class="judul ok">Jalur Aliran Dana bekerja baik ketika</span>
+          <ul><li>Kamu benar-benar hadir sepanjang jam bursa, sahamnya likuid dan spread rapat.</li></ul>
+        </div>
+        <div>
+          <span class="judul no">Jalur Aliran Dana gagal ketika</span>
+          <ul><li>Kamu memantau sambil melakukan hal lain — data tak lengkap lebih buruk daripada tak ada data.</li><li>Frekuensi transaksi tinggi membuat biaya melampaui keunggulan apa pun. Penyebab kegagalan paling sering dan paling jarang disadari.</li></ul>
+        </div>
+      </div>
+      <div class="catatan">
+        <h4><svg class="ic"><use href="icons.svg#ic-layers"/></svg> Cara memilih tanpa menipu diri sendiri</h4>
+        <p>Jawab jujur: berapa menit kamu benar-benar bisa melihat layar antara 09.00–15.49 hari kerja biasa, kapan uang ini kemungkinan kamu butuhkan, dan apakah aplikasi sekuritasmu menyediakan kedalaman orderbook penuh serta broker summary. Kalau waktu pantaumu di bawah 30 menit, Jalur Aliran Dana bukan pilihan — itu soal ketersediaan data, bukan kemampuanmu. Kalau uangmu dibutuhkan dalam dua belas bulan, Jalur Nilai bukan pilihan. Kalau keduanya tidak terkunci, mulai dari Jalur Tren karena tuntutan waktunya paling moderat.</p>
+      </div>
+      <div class="teks">
+        <p><strong>Diversifikasi</strong> berarti menyebar risiko spesifik satu perusahaan. Memiliki 10 saham perbankan bukan diversifikasi, karena mereka jatuh bersamaan. Contoh alokasi sederhana berdasar jangka waktu tujuan:</p>
         <ul>
           <li><strong>Konservatif</strong>: 70% pendapatan tetap &amp; pasar uang, 20% saham/RD saham, 10% emas.</li>
           <li><strong>Moderat</strong>: 45% pendapatan tetap, 45% saham, 10% emas.</li>
           <li><strong>Agresif</strong>: 20% pendapatan tetap, 70% saham, 10% emas.</li>
         </ul>
-        <p>Lakukan <em>rebalancing</em> sekali atau dua kali setahun: kembalikan porsi ke rencana awal. Ini memaksamu menjual yang sudah naik banyak dan membeli yang tertinggal, sesuatu yang sulit dilakukan berdasarkan perasaan.</p>
+        <p>Lakukan <em>rebalancing</em> sekali-dua kali setahun: kembalikan porsi ke rencana awal. Ini memaksamu menjual yang sudah naik banyak dan membeli yang tertinggal — sesuatu yang sulit dilakukan berdasarkan perasaan.</p>
+      </div>
+
+      <div class="alat" id="risiko" style="--c:var(--n50)">
+        <div class="alat-judul"><span class="ikon-badge"><svg class="ic"><use href="icons.svg#ic-check"/></svg></span><h3>Cek profil risikomu</h3></div>
+        <p class="alat-ket">Lima pertanyaan singkat. Jawab jujur, bukan dengan versi dirimu yang paling pemberani.</p>
+        <div class="kuis-kartu" id="risiko-kartu" style="background:#fff;max-width:none"></div>
       </div>
     </div>
 
-    <div class="alat" style="--c:var(--n50)">
-      <div class="alat-judul"><span class="ikon-badge"><svg class="ic"><use href="icons.svg#ic-check"/></svg></span><h3>Cek profil risikomu</h3></div>
-      <p class="alat-ket">Lima pertanyaan singkat. Jawab jujur, bukan dengan versi dirimu yang paling pemberani.</p>
-      <div class="kuis-kartu" id="risiko" style="background:#fff;max-width:none"></div>
+    <div class="bab" id="istilah">
+      <h3>6.12 Kamus istilah saham</h3>
+      <div class="teks"><p>Rujukan cepat untuk singkatan yang muncul di modul ini. Kamus lengkap seluruh situs ada di <a href="kamus.html">halaman Kamus</a>.</p></div>
+      <ul class="kamus">
+        <li><dl><dt>ARA / ARB</dt><dd>Auto Rejection Atas/Bawah — batas kenaikan/penurunan harga harian.</dd></dl></li>
+        <li><dl><dt>CALK</dt><dd>Catatan atas Laporan Keuangan — rincian utang, pihak berelasi, perkara hukum.</dd></dl></li>
+        <li><dl><dt>CFO</dt><dd>Cash Flow from Operations, arus kas dari aktivitas operasi.</dd></dl></li>
+        <li><dl><dt>DCF / DDM</dt><dd>Discounted Cash Flow / Dividend Discount Model — dua metode valuasi nilai intrinsik.</dd></dl></li>
+        <li><dl><dt>DER</dt><dd>Debt to Equity Ratio, total liabilitas dibagi ekuitas.</dd></dl></li>
+        <li><dl><dt>EV/EBITDA</dt><dd>Enterprise Value dibagi laba sebelum bunga, pajak, penyusutan &amp; amortisasi.</dd></dl></li>
+        <li><dl><dt>Free float</dt><dd>Porsi saham yang beredar di publik, di luar pengendali dan afiliasinya.</dd></dl></li>
+        <li><dl><dt>HMETD</dt><dd>Hak Memesan Efek Terlebih Dahulu, atau rights issue.</dd></dl></li>
+        <li><dl><dt>ICR</dt><dd>Interest Coverage Ratio, laba usaha dibagi beban bunga.</dd></dl></li>
+        <li><dl><dt>KPEI / KSEI</dt><dd>Lembaga kliring-penjaminan / penyimpanan-penyelesaian efek Indonesia.</dd></dl></li>
+        <li><dl><dt>PEG</dt><dd>Price/Earnings to Growth, PER dibagi laju pertumbuhan laba.</dd></dl></li>
+        <li><dl><dt>R (satuan hasil)</dt><dd>Untung atau rugi sebuah transaksi dibagi risiko awalnya.</dd></dl></li>
+        <li><dl><dt>RR</dt><dd>Risk Reward Ratio, rasio imbal hasil terhadap risiko.</dd></dl></li>
+        <li><dl><dt>T+2</dt><dd>Penyelesaian transaksi dua hari bursa setelah transaksi terjadi.</dd></dl></li>
+        <li><dl><dt>Tick</dt><dd>Fraksi harga, kelipatan minimum pergerakan harga saham.</dd></dl></li>
+        <li><dl><dt>WACC</dt><dd>Weighted Average Cost of Capital, biaya modal rata-rata tertimbang.</dd></dl></li>
+      </ul>
+      <div class="catatan">
+        <h4><svg class="ic"><use href="icons.svg#ic-book"/></svg> Sumber lanjutan</h4>
+        <p>Sekolah Pasar Modal BEI (kelas gratis level 1 &amp; 2) untuk definisi resmi. Situs BEI untuk peraturan, laporan keuangan, dan keterbukaan informasi — sumber primer, dan kebiasaan memeriksanya membedakan analisa dari opini. KSEI AKSes untuk memeriksa kepemilikan efekmu sendiri. Praktikkan dulu tanpa uang lewat fitur portofolio virtual sebelum memakai dana nyata — yang diuji bukan tebakan arahnya, melainkan apakah kamu benar-benar menjalankan aturan yang kamu tulis sendiri.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -171,13 +759,15 @@
         <li><a href="fondasi.html#darurat">Dana darurat</a></li>
         <li><a href="nabung.html#compound">Tabungan masa depan</a></li>
         <li><a href="rumah.html#kpr">Cicilan KPR</a></li>
+        <li><a href="saham.html#impas">Titik impas transaksi</a></li>
+        <li><a href="saham.html#posisi">Ukuran posisi</a></li>
         <li><a href="saham.html#risiko">Profil risiko</a></li>
         <li><a href="kuis.html">Cek pemahaman</a></li>
         <li><a href="kamus.html">Kamus istilah</a></li>
       </ul>
     </div>
     <div class="disclaimer" style="grid-column:1/-1">
-      Seluruh isi situs ini bersifat edukatif dan bukan saran investasi, hukum, atau perpajakan yang dipersonalisasi. Hasil hitungan adalah perkiraan; angka sebenarnya bergantung pada kebijakan bank, penyelenggara, dan peraturan yang berlaku saat kamu bertransaksi. Kinerja masa lalu tidak menjamin hasil di masa depan. Verifikasi legalitas setiap lembaga keuangan ke OJK, Bappebti, atau bursa terkait sebelum menyetor dana.
+      Seluruh isi situs ini bersifat edukatif dan bukan saran investasi, hukum, atau perpajakan yang dipersonalisasi. Hasil hitungan adalah perkiraan; angka sebenarnya bergantung pada kebijakan bank, penyelenggara, dan peraturan yang berlaku saat kamu bertransaksi. Kinerja masa lalu tidak menjamin hasil di masa depan. Lima studi kasus di atas menyebut emiten nyata dan peristiwa yang sudah selesai serta diberi tanggal — disajikan semata sebagai bahan latihan membaca data, tidak menggambarkan kondisi emiten tersebut saat ini, dan bukan penilaian atas sahamnya. Verifikasi legalitas setiap lembaga keuangan ke OJK, Bappebti, atau bursa terkait sebelum menyetor dana, dan periksa aturan ARA/ARB, batas harga minimum, serta tarif komisi terbaru ke pengumuman resmi BEI dan sekuritasmu sebelum memakainya untuk keputusan nyata.
     </div>
   </div>
 </footer>
@@ -188,7 +778,79 @@
 <script>
 (function(){
 "use strict";
-var $=Celengan.$;
+var $=Celengan.$, rp=Celengan.rp, num=Celengan.num, pasangMask=Celengan.pasangMask;
+
+/* ---------- kalkulator titik impas ---------- */
+function tickOf(price){
+  if (price < 200) return 1;
+  if (price < 500) return 2;
+  if (price < 2000) return 5;
+  if (price < 5000) return 10;
+  return 25;
+}
+function roundUpTick(price){
+  var t = tickOf(price);
+  return Math.ceil(price / t) * t;
+}
+function hitungImpas(){
+  if(!$("ib-harga"))return;
+  var harga=num($("ib-harga")), lot=num($("ib-lot")),
+      feeb=parseFloat($("ib-feeb").value)/100, feej=parseFloat($("ib-feej").value)/100;
+  $("ib-feeb-v").textContent=parseFloat($("ib-feeb").value).toFixed(2).replace(".",",")+"%";
+  $("ib-feej-v").textContent=parseFloat($("ib-feej").value).toFixed(2).replace(".",",")+"%";
+  if(!(harga>0&&lot>0)||feej>=1){
+    $("ib-impas").textContent="-"; $("ib-modal").textContent="-"; $("ib-persen").textContent="-"; $("ib-total").textContent="-";
+    return;
+  }
+  var lembar=lot*100;
+  var modalKeluar=harga*lembar*(1+feeb);
+  var impasMentah=harga*(1+feeb)/(1-feej);
+  var impas=roundUpTick(impasMentah);
+  var totalBiaya=(harga*lembar*feeb)+(impas*lembar*feej);
+  $("ib-impas").textContent=rp(impas);
+  $("ib-modal").textContent=rp(modalKeluar);
+  $("ib-persen").textContent=((impas/harga-1)*100).toFixed(2).replace(".",",")+"%";
+  $("ib-total").textContent=rp(totalBiaya);
+}
+["ib-harga","ib-lot"].forEach(function(id){ pasangMask(id,hitungImpas); });
+["ib-feeb","ib-feej"].forEach(function(id){ var e=$(id); if(e)e.addEventListener("input",hitungImpas); });
+hitungImpas();
+
+/* ---------- kalkulator ukuran posisi ---------- */
+function hitungPosisi(){
+  if(!$("ps-modal"))return;
+  var modal=num($("ps-modal")), risikoPct=parseFloat($("ps-risiko").value)/100,
+      entry=num($("ps-entry")), stop=num($("ps-stop")), target=num($("ps-target"));
+  $("ps-risiko-v").textContent=parseFloat($("ps-risiko").value).toFixed(1).replace(".",",")+"%";
+  var v=$("ps-verdict");
+  if(!(modal>0&&entry>0&&stop>0)||entry<=stop){
+    $("ps-lot").textContent="n/a"; $("ps-nilai").textContent="-"; $("ps-rugi").textContent="-"; $("ps-rr").textContent="-";
+    v.className="verdict bahaya"; v.textContent="Harga stop harus di bawah harga entry untuk posisi beli.";
+    return;
+  }
+  var risikoRp=modal*risikoPct;
+  var perLembar=entry-stop;
+  var lots=Math.floor(risikoRp/(perLembar*100));
+  var nilaiPosisi=lots*100*entry;
+  var rugi=lots*100*perLembar;
+  var rr=(target>entry)?(target-entry)/perLembar:NaN;
+  $("ps-lot").textContent=lots>0?(lots.toLocaleString("id-ID")+" lot"):"0 lot";
+  $("ps-nilai").textContent=rp(nilaiPosisi)+" ("+(modal>0?(nilaiPosisi/modal*100).toFixed(1).replace(".",","):"0")+"% modal)";
+  $("ps-rugi").textContent=rp(rugi);
+  $("ps-rr").textContent=isNaN(rr)?"-":rr.toFixed(2).replace(".",",")+" : 1";
+  if(lots===0){
+    v.className="verdict hati"; v.textContent="Ukuran posisi jadi 0 lot — stopnya terlalu jauh untuk modal dan risiko ini.";
+  } else if(!isNaN(rr)&&rr<2){
+    v.className="verdict hati"; v.textContent="Rasio di bawah 2:1 sebaiknya dilewati — cari setup dengan target lebih jauh atau stop lebih rapat.";
+  } else {
+    v.className="verdict aman"; v.textContent="Rasio imbal risiko memadai. Tulis rencana ini ke jurnal sebelum order dikirim.";
+  }
+}
+["ps-modal","ps-entry","ps-stop","ps-target"].forEach(function(id){ pasangMask(id,hitungPosisi); });
+var psRisiko=$("ps-risiko"); if(psRisiko)psRisiko.addEventListener("input",hitungPosisi);
+hitungPosisi();
+
+/* ---------- cek profil risiko ---------- */
 var soalRisiko=[
   {q:"Kapan uang ini kemungkinan besar kamu butuhkan?",o:[["Kurang dari 2 tahun",0],["2–5 tahun",1],["5–10 tahun",2],["Lebih dari 10 tahun",3]]},
   {q:"Portofoliomu turun 25% dalam sebulan. Apa yang kamu lakukan?",o:[["Jual semua, tidak tahan",0],["Jual sebagian untuk mengurangi cemas",1],["Diamkan, tunggu pulih",2],["Tambah beli karena harga murah",3]]},
@@ -197,7 +859,7 @@ var soalRisiko=[
   {q:"Mana yang lebih kamu pilih?",o:[["Hasil 5% yang hampir pasti",0],["Hasil 8% dengan kemungkinan turun sedikit",1],["Hasil 12% dengan kemungkinan turun cukup dalam",2],["Hasil setinggi mungkin, saya siap fluktuasi besar",3]]}
 ];
 (function(){
-  var box=$("risiko"); if(!box)return;
+  var box=$("risiko-kartu"); if(!box)return;
   var idx=0, skor=0;
   function render(){
     if(idx>=soalRisiko.length){ hasil(); return; }
